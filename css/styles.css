@@ -1,0 +1,1438 @@
+/* CSS LA CHICHA FILMS - JERSSON ANASTACIO */
+
+/* ----------------------------------------- */
+
+/* IMPORTAMOS LA FUENTE DE GOOGLE */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* ELIMINAMOS LOS MÁRGENES DEL NAVEGADOR */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* APLICAMOS A TODO EL BODY LA FUENTE */
+body {
+	font-family: "Montserrat", sans-serif;
+	min-height: 100vh;	
+}
+
+/* EL FOOTER ESTARÁ SIEMPRE ABAJO */
+footer {
+	margin-top: auto;
+}
+
+/* BORRAMOS EL SUBRAYADO DE LOS LINKS */
+a{
+	text-decoration: none;
+}
+
+/* GRILLA DEL BODY */
+
+#chicha_grilla_body {
+	display: grid;
+	grid-template-columns: 100%; /* 1 SOLA COLUMNA QUE ABARCA EL 100% DEL BODY */
+	grid-template-rows: auto 1fr auto; /* DEFINIMOS LAS FILAS: HACEMOS QUE EL HEADER SE POSICIONE AUTOMATICAMENTE ARRIBA DEL BODY, EL MAIN TIENE 1 FRACCION DEL BODY, Y EL FOOTER SE POSICIONARÁ AUTOMATICAMENTE AL FINAL DEL BODY */
+	grid-template-areas: "area_chicha_header"
+						 "area_chicha_main"
+						 "area_chicha_footer";
+}
+
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DEL HEADER */
+.chicha_header{ /* APLICA A TODO EL HEADER */
+	grid-area: area_chicha_header;
+	display: flex; /* MOSTRAMOS EL LOGO, EL NAV Y REDES SOCIALES DE UNA MANERA FLEXIBLE A SU CONTENEDOR */
+	justify-content: space-evenly; /* AJUSTAMOS LOS 3 ELEMENTOS EN DISTANCIAS IGUALES */
+	align-items: center; /* ALINEAMOS LOS 3 ELEMENTOS EN EL CENTRO */
+	position: sticky; /* EL HEADER SIEMPRE ES VISIBLE CUANDO SE HACE SCROLL */
+	z-index: 10; /* ESTA PROPIEDAD ES PARA QUE EL HEADER ESTE POR ENCIMA DEL VIDEO */
+	top: 0px; /* EL HEADER SIEMPRE ES VISIBLE CUANDO SE HACE SCROLL EN LA PARTE SUPERIOR */
+	background-color: black; /* COLOR DE FONDO DEL HEADER */
+	font-size: 20px; /* TAMAÑO DE FUENTE DEL HEADER */
+	padding: 1.5rem 0rem; /* ESPACIO DE RELLENO DEL HEADER EN VERTICAL Y HORIZONTAL */
+	border-bottom: 3px solid #cb2459 /* BORDE INFERIOR DEL HEADER */	
+}
+
+.chicha_header li{ /* APLICA A LOS LI DEL HEADER */
+	position: relative; /* POSICIÓN RELATIVA DE LOS LI */
+	display: inline-block; /* POSICIÓN EN LINEA DE LOS LI */
+	margin: 5px 1rem; /* MÁRGENES PARA SEPARAR LOS LI */
+	padding: 10px; /* ESPACIO DE RELLENO DE LOS LI */
+}
+
+.chicha_logo_color img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
+	width: auto;
+	height: auto;
+	max-width: 183px;
+	max-height: 80px;
+}
+
+.chicha_header a{ /* APLICA A LOS LINKS DEL HEADER */
+	color: white; /* COLOR DE LOS LINKS DEL HEADER */
+}
+
+.chicha_menu > li:hover{ /* APLICA A LOS LI DEL MENÚ CUANDO EL MOUSE SE POSA SOBRE ELLOS */
+	background-color: #cb2459; /* COLOR DE FONDO DE LOS LI */
+	transition: all 0.5s
+}
+
+.chicha_servicios_menu{ /* SUB MENU DE LA PÁGINA SERVICIOS */
+	position: absolute; /* POSICIÓN ABSOLUTA */
+	display: none; /* NO SE MUESTRA EL SUB MENÚ */
+	width: 250px; /* ANCHO DEL SUB MENÚ */
+	background-color: rgba(255, 0, 0, 0.5); /* COLOR DEL SUB MENÚ */	
+}
+
+.chicha_menu li:hover .chicha_servicios_menu{ /* MUESTRA EL SUB MENU SERVICIOS CUANDO EL MOUSE SE POSA SOBRE EL LI SERVICIOS */
+	display: flex; /* MOSTRAMOS SUB MENÚ SERVICIOS DE UNA MANERA FLEXIBLE A SU CONTENEDOR */
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+}
+
+.chicha_servicios_menu > li:hover{ /* APLICA A LOS LI DEL SUB MENÚ SERVICIOS CUANDO EL MOUSE SE POSA SOBRE ELLOS */
+	background-color: #000000;	
+}
+/* FIN DEL CSS DEL HEADER */
+
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DE LA PÁGINA DEL INDEX */
+.chicha_main_index{
+	display: grid;
+	grid-area: area_chicha_main;
+	grid-template-rows: auto auto auto auto; /* 2730px ES EL 88% DEL MAIN */
+	grid-template-areas: "area_main_index_video"
+						 "area_main_index_titulo"
+						 "area_main_index_descripcion"
+						 "area_main_index_mision";
+	justify-content: center;
+	align-items: center;
+	background-color:#ffffff;
+}
+
+.chicha_main_index_elements{ /* APLICA AL MAIN DEL INDEX */
+	width: 50%;
+	display: grid;
+	background-color: rgb(255, 255, 255); /* COLOR DE FONDO DEL MAIN INDEX */
+	align-self: center;
+	justify-self: center;	
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	padding-top: 20px; /* RELLENO SUPERIOR */
+}
+
+.chicha_main_index_elements a{ /* APLICA A LOS LINKS DEL MAIN INDEX */
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE DE LOS LINKS */
+}
+
+.chicha_video_main video{ /* APLICA PARA QUE EL VIDEO SE EXTIENDA EN TODA LA PANTALLA */
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chicha_video_main{ /* APLICA AL VIDEO DE INICIO */
+	display: flex; /* MOSTRAMOS EL VIDEO DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+	justify-content: space-around; /* AJUSTAMOS EL VIDEO CON IGUALDAD DE ESPACIADO */
+	align-items: center; /* ALINEACIÓN CENTRADA DEL VIDEO */	
+}
+
+
+.chicha_titulo h1{ /* APLICA AL H1 DEL MAIN INDEX */
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 45px; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_subtitulo{ /* APLICA AL CONTENEDOR DE LA CLASE CHICHA_SUBTITULO */
+	color: rgb(0, 0, 0); /* COLOR */
+	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+	justify-content: center; /* JUSTIFICAMOS EL CONTENIDO EN EL CENTRO */
+	align-items: center; /* ALINEACIÓN CENTRADA DE ELEMENTOS */
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	font-size: 20px; /* TAMAÑO DE FUENTE */	
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
+}
+
+.chicha_subtitulo img{ /* APLICA A LAS IMAGENES DE ESTRELLAS DEL SUBTITULO */
+	width: auto;
+	height: auto;
+	max-width: 30px;
+	max-height: 29px;
+}
+
+.chicha_boton_video_icon{
+	padding-bottom: 1rem;
+}
+
+.chicha_boton_video_text{
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #000000 /* BORDE INFERIOR DEL MAIN INDEX */
+}
+
+.chicha_info_main{ /* APLICA A LA INFORMACION SECUNDARIA DEL MAIN */
+	width: 70%;
+	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+	justify-content: space-around; /* AJUSTAMOS EL VIDEO CON IGUALDAD DE ESPACIADO */
+	justify-self: center;
+	align-items: center; /* ALINEACIÓN CENTRADA DE LOS ELEMENTOS */
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	/*flex-wrap: wrap; ESTO ES PARA EL MEDIA CUERY*/ 
+	background-color: rgb(255, 255, 255); /* COLOR DE FONDO */
+	gap: 50px; /* ESPACIADO ENTRE CONTENEDORES */
+	padding: 3rem 3rem;	/* RELLENO PARA SEPARACIÓN */
+}
+
+.chicha_info_main_text{
+	width: 50%;
+}
+
+.chicha_info_main_carrusel{	
+	display: flex;	
+	justify-content: center;
+	align-items: center;		
+}
+
+.chicha_info_main_carrusel img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chicha_bienvenidos{ /* APLICA AL PÁRRAFO BIENVENIDOS */
+	font-size: 30px; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_descripcion{ /* APLICA AL PÁRRAFO DESCRIPCIÓN */
+	font-size: large; /* TAMAÑO DE FUENTE */
+	padding: 2rem 0rem; /* RELLENO PARA SEPARACIÓN */
+}
+
+.chicha_mision_vision{ /* APLICA A LA SECCIÓN DE MISION Y VISION */
+	background-color: rgb(255, 255, 255); /* COLOR DE FONDO */
+	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center; /* JUSTIFICAMOS EL CONTENIDO EN EL CENTRO */
+	align-items: center; /* ALINEACIÓN CENTRADA DE LOS ELEMENTOS */
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	font-size: large; /* TAMAÑO DE FUENTE */
+	padding: 2rem 10rem;	/* RELLENO PARA SEPARACIÓN */
+	border-top: 1px solid #000000 /* BORDE SUPERIOR */
+}
+
+.chicha_mision_vision p{ /* APLICA A LOS PARRAFOS DE LA SECCIÓN DE MISION Y VISION */
+	font-size: 30px; /* TAMAÑO DE FUENTE */
+	line-height: 100px;	/* SEPARACION DE LINEAS DE PARRAFOS */
+}
+/* FIN DEL CSS DE LA PÁGINA DE INICIO */
+
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DE LA PÁGINA NOSOTROS */
+
+.chicha_main_nosotros{
+	display: grid;
+	grid-area: area_chicha_main;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-areas: "area_main_nosotros_logo"
+						 "area_main_nosotros_titulo"
+						 "area_main_nosotros_descripcion"
+						 "area_main_nosotros_titulo_equipo"
+						 "area_main_nosotros_equipo";
+	justify-content: center;
+	align-items: center;
+	background-color:#ffffff;
+}
+
+.chicha_arte{
+	background-color: #ffffff;
+}
+
+.chicha_logo_pagina_nosotros{	
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #000000;	
+}
+
+.chicha_logo_color_nosotros img{ 
+	width: auto;
+	height: auto;
+	max-width: 388px;
+	max-height: 170px;
+}
+
+.chicha_quienes_somos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 3rem; 
+}
+
+.chicha_quienes_somos h1{
+	font-size: 40px;
+	font-weight: bolder;
+}
+
+.chicha_info_page_nosotros {
+	width: 70%;
+    display: flex;
+    justify-content: space-around;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    gap: 5rem;
+    padding: 4rem 2rem;
+}
+
+.chicha_info_page_nosotros_descripcion{
+	grid-area: area_main_nosotros_descripcion;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.chicha_info_page_nosotros_descripcion p{ 
+	font-size: 1.5rem;
+	line-height: 35px;
+}
+
+.chicha_info_main_carrusel_nosotros{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.chicha_info_main_carrusel_nosotros img{ 
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chicha_nuestro_equipo{
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	text-align: center;
+	font-size: 25px;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	border-bottom: 1px solid #000000; 
+}
+
+.chicha_avatar_container{
+	display: grid;
+	grid-area: area_main_nosotros_equipo;
+	grid-template-columns: 20% 20% 20% 20%;
+	grid-template-areas: "cargo1 cargo2 cargo3 cargo4"
+						 "cargo5 cargo6 cargo7 cargo8";
+	justify-content: center;
+	gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
+	padding: 4rem 0rem;
+	line-height: 25px;	
+ }
+ 
+ .chicha_avatar{
+	width: auto;
+	text-align: center;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	padding: 1.5rem 1.5rem;
+ }
+
+ .chicha_avatar img{
+	width: auto;
+	height: auto;
+	max-width: 100px;
+	max-height: 100px;
+ }
+
+/* FIN DEL CSS DE LA PÁGINA NOSOTROS */
+
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DE LA PÁGINA SERVICIOS */
+
+.chicha_main_servicios{
+	display: grid;
+	grid-area: area_chicha_main;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "area_main_servicios_titulo"
+						 "area_main_servicios_descripcion"
+						 "area_main_servicios_elements";
+	justify-content: center;
+	align-items: center;
+	background-color:#ffffff;
+}
+
+.chicha_title_page_servicios{
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #000000; 
+}
+
+.chicha_title_page_servicios h2{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_title_page_servicios h1{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 45px; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_subtitle_page_servicios{
+	width: 70%;
+	grid-area: area_main_servicios_descripcion;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+	font-size: 25px;
+	padding-top: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+.chicha_subtitle_page_servicios p{
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chicha_info_page_servicios{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	text-align: center;
+	gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.chicha_info_page_servicios_container{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+	padding: 2rem 0rem;	
+}
+
+.chicha_video_services{ 
+	width: 30%;
+	height: 30%;
+}
+
+.chicha_video_services video{ 
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chicha_info_page_servicios h2{
+	padding-bottom: 15px;
+}
+
+.chicha_info_page_servicios_name{
+	max-width: 40%;
+	max-height: 40%;
+}
+
+.chicha_info_page_servicios_name p{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* FIN DEL CSS DE LA PÁGINA SERVICIOS */
+
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DE LA PÁGINA PORTAFOLIO */
+
+.chicha_main_portafolio{
+	display: grid;
+	grid-area: area_chicha_main;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "area_main_portafolio_titulo"
+						 "area_main_portafolio_descripcion"
+						 "area_main_portafolio_subtitle"
+						 "area_main_portafolio_elements";
+	justify-content: center;
+	align-items: center;
+	background-color:#ffffff;
+}
+
+.chicha_title_page_portafolio{
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #000000; 
+}
+
+.chicha_title_page_portafolio h2{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_title_page_portafolio h1{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 45px; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_title_page_portafolio p{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 2rem;
+}
+
+.chicha_descripcion_page_servicios{
+	width: 70%;
+	grid-area: area_main_portafolio_descripcion;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	align-self: center;
+	text-align: center;
+	font-size: 25px;
+    padding: 2rem 0rem;
+}
+
+.chicha_descripcion_page_servicios p{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chicha_subtitle_page_portafolio{
+	color: rgb(0, 0, 0); /* COLOR */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.chicha_iframe_vimeo{
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+	padding-top: 3rem;
+	padding-bottom: 5rem;
+	gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
+}
+
+/* FIN DEL CSS DE LA PÁGINA PORTAFOLIO */
+
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DE LA PÁGINA CLIENTES */
+
+.chicha_main_clientes{
+	display: grid;
+	grid-area: area_chicha_main;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-areas: "area_main_clientes_titulo"
+						 "area_main_clientes_descripcion"
+						 "area_main_clientes_subtitle"
+						 "area_main_clientes_elements"
+						 "area_main_clientes_leyenda";
+	justify-content: center;
+	align-items: center;
+	background-color:#ffffff;
+}
+
+.chicha_title_page_clientes{
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #000000; 
+}
+
+.chicha_descripcion_page_clientes{
+	width: 70%;
+	grid-area: area_main_clientes_descripcion;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	align-self: center;
+	text-align: center;
+	font-size: 25px;
+    padding: 2rem 0rem;
+}
+
+.chicha_descripcion_page_clientes p{
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chicha_title_page_clientes h2{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_title_page_clientes h1{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 45px; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_title_page_clientes p{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 2rem;
+}
+
+.chicha_subtitle_page_clientes{
+	color: rgb(0, 0, 0);
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.chicha_clientes_grilla{
+	display: grid;
+	grid-area: area_main_clientes_elements;
+	grid-template-columns: 15% 15% 15% 15% 15%;
+	grid-template-rows: 25% 25% 25% 25%;
+	grid-template-areas: "cliente_uno cliente_dos cliente_tres cliente_cuatro cliente_cinco"
+						 "cliente_seis cliente_siete cliente_ocho cliente_nueve cliente_diez"
+						 "cliente_once cliente_doce cliente_trece cliente_catorce cliente_quince"
+						 "cliente_dieciseis cliente_diecisiete cliente_dieciocho cliente_diecinueve cliente_veinte";
+	justify-content: center;
+	align-items: center;
+	background-color:#ffffff;
+}
+
+.chicha_cliente{
+	justify-self: center;
+	align-self: center;
+	padding: 2.5rem;
+}
+
+
+.chicha_cliente img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.chicha_subtitle_end_page_clientes{
+	width: 80%;
+	color: rgb(0, 0, 0); /* COLOR */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	text-align: center;
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 2rem;
+	padding-bottom: 4rem;
+}
+
+/* FIN DEL CSS DE LA PÁGINA CLIENTES */
+
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DE LA PÁGINA CONTÁCTO */
+
+.chicha_main_contacto{
+	display: grid;
+	grid-area: area_chicha_main;
+	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-areas: "area_main_contacto_titulo"
+						 "area_main_contacto_datos"
+						 "area_main_contacto_subtitle"
+						 "area_main_contacto_elements"
+						 "area_main_contacto_estamos_aquí"
+						 "area_main_contacto_mapa";
+	justify-content: center;
+	align-items: center;
+	background-color:#ffffff;
+}
+
+
+.chicha_title_page_contacto{
+	width: 70%;
+	grid-area: area_main_contacto_titulo;
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.chicha_title_page_contacto h1{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 45px; /* TAMAÑO DE FUENTE */
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #000000;
+}
+
+.chicha_title_page_contacto p{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 2rem;
+}
+
+.chicha_info_page_contacto{
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	text-align: center;
+	gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
+	padding-top: 1rem;
+	padding-bottom: 5rem;
+	border-bottom: 1px solid #000000;
+}
+
+.chicha_info_page_contacto i{ 
+	padding-right: 10px;
+	font-size: 30px; /* AJUSTAMOS EL TAMAÑO DE LOS ICONOS DE REDES SOCIALES */
+}
+
+.chicha_info_page_contacto p{
+	padding: 1rem;
+	font-size: 20px;
+	font-weight: bold; /* PONEMOS NEGRITA A UN PARRAFO */
+}
+
+.chicha_info_page_contacto a{
+	color: #000000;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.chicha_subtitle_page_contacto{
+	width: 70%;
+	color: rgb(0, 0, 0); /* COLOR */
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	text-align: center;
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+}
+
+.chicha_subtitle_page_contacto h3{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 25px; /* TAMAÑO DE FUENTE */
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #000000;
+}
+
+.chicha_subtitle_page_contacto p{
+	color: rgb(0, 0, 0); /* COLOR */
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+}
+
+.chicha_form_container{
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	align-self: center;
+	text-align: start;
+	gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
+	padding-top: 2rem;
+	padding-bottom: 4rem;
+}
+
+.chicha_form_container form{
+	line-height: 25px;
+	font-weight:bolder
+}
+
+.chicha_form_container form fieldset{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.chicha_form_container_elements{
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+	flex-wrap: wrap;
+	font-weight:bolder
+}
+
+.chicha_form_textbox{
+	width: 500px;
+	height: 30px;
+	padding: 5px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.chicha_form_textbox_comment{
+	width: 500px;
+	height: 300px;
+	padding: 5px;
+	font-family: "Montserrat", sans-serif;
+	resize: none;
+}
+
+.chicha_form_box_sex select{
+	font-family: "Montserrat", sans-serif;
+}
+
+.chicha_form_info_check{
+	display: flex;
+	justify-content: center;
+	text-align: center;	
+	align-items: center;
+	gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
+
+}
+
+.chicha_form_container_boton{
+	width: 100%;
+	display: flex;
+}
+
+.chicha_form_boton{
+	width: 100%;
+	background-color: #cb2459;
+	border: none;
+	padding: 12px;
+	color: white;
+	margin: 1rem;
+	font-size: 15px;
+	font-family: "Montserrat", sans-serif;
+	cursor: pointer;
+}
+
+.chicha_form_text_page_contacto{
+	width: 40%;
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
+	padding: 1rem 0rem;
+	line-height: 35px;
+}
+
+.chicha_form_text_page_contacto p{
+	font-size: 20px;
+}
+
+.chicha_form_box_sex{
+	font-family: "Montserrat", sans-serif;
+}
+
+.chicha_form_text_page_contacto a{
+	color: #000000;
+
+}
+
+.chicha_redes_align_page_contacto{
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+	font-size: 20px;
+}
+
+.chicha_redes_align_page_contacto a{ 
+	padding: 10px;
+}
+
+.chicha_title_estamos_aqui{
+	width: 70%;
+	color: rgb(0, 0, 0); /* COLOR */
+	display: flex;
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	justify-content: center;
+	justify-self: center;
+	align-items: center;
+	text-align: center;
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.chicha_title_estamos_aqui h1{
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #000000;
+}
+
+.chicha_title_estamos_aqui p{
+	color: rgb(0, 0, 0); /* COLOR */
+	font-size: 20px; /* TAMAÑO DE FUENTE */
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+}
+
+.chicha_mapa{
+	position: relative;
+}
+
+.chicha_mapa iframe{
+	width: 100%;
+	height: 450px;
+	border: 0px;
+}
+
+/* FIN DEL CSS DE LA PÁGINA CONTÁCTO */
+
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DEL FOOTER */
+
+.chicha_footer{ /* APLICA A TODO EL FOOTER */
+	grid-area: area_chicha_footer;
+	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+	justify-content: space-evenly; /* AJUSTAMOS EL VIDEO CON UNIFORMIDAD DE ESPACIADO */
+	align-items: center; /* ALINEACIÓN CENTRADA DE LOS ELEMENTOS */
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	background-color: black; /* COLOR DE FONDO */
+	padding-top: 1rem;
+	border-top: 3px solid #cb2459; /* COLOR BORDE SUPERIOR */
+	line-height: 30px; /* SEPARACION DE LINEAS DE PARRAFOS */
+	font-size: medium; /* TAMAÑO DE FUENTE */	
+}
+
+.chicha_logo_bn_footer{
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+.chicha_logo_bn_footer img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
+	width: auto;
+	height: auto;
+	max-width: 250px;
+	max-height: 110px;
+}
+
+.chicha_footer a{ /* APLICA A LOS LINKS DEL FOOTER */
+	color: white; /* COLOR DE LOS LINKS DEL FOOTER */
+}
+
+.chicha_footer h3{ /* APLICA TODOS LOS H3 DEL FOOTER */
+	color: white; /* COLOR */
+	bottom: 0px;
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	font-size: large; /* TAMAÑO DE FUENTE */
+	padding-bottom: 20px /* RELLENO INFERIOR */
+}
+
+.chicha_footer p{ /* APLICA TODOS LOS p DEL FOOTER */
+	color: white; /* COLOR */
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+}
+
+.chicha_contacto{ /* APLICA A LOS DATOS COLOCADOS EN CONTACTANOS */
+	display: block; /* MOSTRAMOS EL ELEMENTO EN BLOQUE */
+	padding-bottom: 10px;
+
+}
+
+.chicha_info_footer{ /* APLICA A LOS DATOS COLOCADOS EN CONTACTANOS */
+	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+	max-width: 800px; /* ANCHO MÁXIMO DEL CONTENEDOR */
+	justify-content: center; /* AJUSTAMOS EL CONTENIDO EN EL CENTRO */
+	flex-wrap: wrap; /* CON ESTA PROPIEDAD LOS ELEMENTOS SALTAN A LA SIGUIENTE LÍNEA */
+	padding-bottom: 0px; /* RELLENO INFERIOR */
+}
+
+.chicha_info_footer div{ /* APLICA A LOS DIV COLOCADOS EN CONTACTANOS */	
+	width: 380px; /* ANCHO */
+	margin: 5px; /* MARGENES DE SEPARACIÓN */
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	line-height: 20px; /* SEPARACION DE LINEAS DE PARRAFOS */
+	padding-bottom: 10px; /* RELLENO INFERIOR */
+}
+
+.chicha_info_footer div i{ 
+	padding-right: 7px;
+}
+
+.chicha_copyright{ /* APLICA A LOS DATOS COLOCADOS EN EL COPYRIGHT */
+	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	align-items: center; /* ALINEACIÓN CENTRADA DE LOS ELEMENTOS */
+	justify-content: center;
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	background-color: black; /* COLOR DE FONDO */
+	padding-bottom: 1rem; /* RELLENO */
+	line-height: 30px; /* SEPARACION DE LINEAS DE PARRAFOS */
+	font-size: medium; /* TAMAÑO DE FUENTE */
+}
+
+.chicha_copyright p{ /* APLICA TODOS LOS p DEL FOOTER */
+	color: white; /* COLOR */
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+}
+
+.chicha_copyright_line::before{
+	content: "";
+	display: flex;
+	align-items: center; /* ALINEACIÓN CENTRADA DE LOS ELEMENTOS */
+	justify-content: center;
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	width: 100%;
+	height: 1px;
+	background-color: currentColor;
+}
+
+.chicha_redes{ /* APLICA A LOS DATOS COLOCADOS EN SÍGUENOS */
+	display: flex;
+	justify-content: space-around; /* AJUSTAMOS EL VIDEO CON IGUALDAD DE ESPACIADO */
+	align-items: center;
+	text-align: center;
+}
+
+.chicha_redes_align{ 
+	display: inline;
+	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 25px;
+}
+
+.chicha_redes_align a{ 
+	padding: 10px;
+}
+
+/* FIN DEL CSS DEL FOOTER */
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 600 PX BODY (HEADER, MAIN Y FOOTER) */
+
+@media only screen and (max-width:600px){
+	
+	.chicha_header{
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+		position: relative
+	}
+
+	.chicha_menu{
+		display: flex;
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	}
+	
+	ul{
+        height: 300px;
+        flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+	.chicha_footer{
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 600 PX PAGINA INICIO */
+
+@media only screen and (max-width:600px){
+
+	.chicha_main_index_elements{
+		width: 70%;
+	}
+
+	.chicha_titulo h1 {
+		font-size: 40px;
+	}
+
+	.chicha_subtitulo{ /* APLICA AL CONTENEDOR DE LA CLASE CHICHA_SUBTITULO */
+		font-size: 18px; /* TAMAÑO DE FUENTE */	
+	}
+
+	.chicha_subtitulo img {
+		max-width: 25px;
+		max-height: 25px;
+	}
+
+	.chicha_descripcion {
+		padding: 1rem 0rem;
+	}
+
+	.chicha_info_main{
+		width: 100%;
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		padding: 2rem 2rem;
+		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */	
+	}
+
+	.chicha_info_main_text{
+		width: 90%;
+	}
+
+	.chicha_mision_vision {
+		padding: 2rem 5rem;
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 600 PX PAGINA NOSOTROS */
+
+@media only screen and (min-width:600px){
+	
+}
+
+@media only screen and (max-width:600px){
+	
+    .chicha_avatar_container{
+		width: auto;
+        height: auto;
+        grid-template-columns: 40% 40%;
+        grid-template-areas: "cargo1 cargo2"
+                             "cargo3 cargo4"
+                             "cargo5 cargo6"
+							 "cargo7 cargo8";
+        justify-content: center;
+		justify-self: center;
+        align-content: center;
+		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+    }
+
+	.chicha_avatar{
+		padding: 1.5rem 1.5rem;
+	 }
+
+	.chicha_quienes_somos{
+		padding-bottom: 2rem; 
+	}
+	
+	.chicha_quienes_somos h1{
+		font-size: 35px;
+	}
+
+	.chicha_info_page_nosotros{
+		width: 100%;
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+		padding: 1rem 2rem;	
+	}
+
+	.chicha_info_page_nosotros p{ 
+		font-size: 20px;
+		line-height: 25px;
+	}
+	.chicha_info_page_nosotros_descripcion{
+		width: 90%;
+	}
+
+	.chicha_info_main_carrusel_nosotros{	
+		display: flex;	
+		justify-content: center;
+		align-items: center;		
+	}
+
+	.chicha_info_main_carrusel_nosotros{
+		width: 90%;
+		height: 90%;
+	}
+	.chicha_info_main_carrusel_nosotros img{	
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;		
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 600 PX PAGINA SERVICIOS */
+
+@media only screen and (min-width:600px){
+	
+}
+
+@media only screen and (max-width:600px){
+
+	.chicha_title_page_servicios{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	.chicha_info_page_servicios{
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		flex-wrap: wrap;
+		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+		padding: 1rem;		
+	}
+
+	.chicha_info_page_servicios_name {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.chicha_subtitle_page_servicios{
+		padding-top: 2rem;
+	}
+
+	.chicha_video_services{ 
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 600 PX PAGINA PORTAFOLIO */
+
+@media only screen and (min-width:600px){
+
+}
+
+@media only screen and (max-width:600px){
+
+	.chicha_title_page_portafolio{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	.chicha_descripcion_page_servicios{
+		padding-top: 2rem;
+		padding-bottom: 1rem;
+	}
+
+	.chicha_iframe_vimeo{
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+		padding-top: 2rem;
+		padding-bottom: 4rem;		
+	}
+
+	.chicha_iframe_vimeo div{
+		width: auto;
+		height: auto;
+	}
+
+
+	.chicha_iframe_vimeo iframe{ 
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 600 PX PAGINA CLIENTES */
+
+@media only screen and (min-width:600px){
+	
+}
+
+@media only screen and (max-width:600px){
+
+	.chicha_title_page_clientes{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	.chicha_descripcion_page_clientes{
+		padding-top: 2rem;
+		padding-bottom: 1rem;	
+	}
+
+	.chicha_subtitle_page_clientes{
+		flex-wrap: wrap;
+		padding-top: 2rem;
+		padding-bottom: 1rem;
+	}
+
+	.chicha_subtitle_page_clientes h3{
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.chicha_clientes_grilla{
+		grid-template-columns: 40% 40%;
+		grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+		grid-template-areas: "cliente_uno cliente_dos"
+							 "cliente_tres cliente_cuatro"
+							 "cliente_cinco cliente_seis " 
+							 "cliente_siete cliente_ocho"
+							 "cliente_nueve cliente_diez"
+							 "cliente_once cliente_doce"
+							 "cliente_trece cliente_catorce"
+							 "cliente_quince cliente_dieciseis"
+							 "cliente_diecisiete cliente_dieciocho"
+							 "cliente_diecinueve cliente_veinte";
+	}
+	
+	.chicha_subtitle_end_page_clientes p{
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 600 PX PAGINA CONTACTO */
+
+@media only screen and (min-width:600px){
+	
+}
+
+@media only screen and (max-width:600px){
+
+	.chicha_title_page_contacto {
+		padding-bottom: 1rem;
+	}
+
+	.chicha_title_page_contacto p{
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.chicha_info_page_contacto{
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+		padding-bottom: 3rem;
+	}
+
+	.chicha_form_text_page_contacto {
+		width: 80%;
+		gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
+		padding: 2rem 0rem;
+	}
+
+	.chicha_redes_align_page_contacto a {
+		padding: 20px;
+	}
+	
+	.chicha_form_container{
+		width: 100%;
+		padding-top: 0rem;
+		padding-bottom: 0rem;
+		gap: 1rem;
+	}
+
+	.chicha_form_container_elements {
+		width: 400px;
+	}
+	
+	.chicha_form_textbox{
+		width: 400px;
+		height: 30px;
+	}
+	
+	.chicha_form_textbox_comment{
+		width: 400px;
+		height: 300px;
+	}
+	
+	.chicha_form_info_check{
+		display: block;
+	}
+
+	.chicha_mapa{
+		width: 73%;
+		height: 450px;
+		border: 0px;
+	}
+
+	.chicha_mapa iframe{
+		width: 100%;
+		height: 450px;
+		border: 0px;
+	}
+}
+
+/* ----------------------------------------- */
+
+
