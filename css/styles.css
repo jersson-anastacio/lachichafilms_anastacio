@@ -26,6 +26,7 @@ footer {
 /* BORRAMOS EL SUBRAYADO DE LOS LINKS */
 a{
 	text-decoration: none;
+	color: #ffffff;
 }
 
 /* GRILLA DEL BODY */
@@ -42,6 +43,41 @@ a{
 /* ----------------------------------------- */
 
 /* INICIO DEL CSS DEL HEADER */
+
+/* HEADER BOOTSTRAP */
+
+.nav-link{
+	font-size: 20px;
+}
+
+.nav-item {
+	padding: 0px 10px;
+}
+
+.navbar {
+    --bs-navbar-padding-x: 3rem;
+    --bs-navbar-padding-y: 2rem;
+	border-bottom: 3px solid #cb2459 /* BORDE INFERIOR DEL HEADER */	
+}
+
+.container-fluid img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
+	width: auto;
+	height: auto;
+	max-width: 183px;
+	max-height: 80px;
+}
+
+.chicha_redes_header{ 
+	display: flex;
+	justify-content: center;
+}
+
+.chicha_redes_header a{ 
+	padding: 10px;
+}
+
+/* HEADER ANTIGUO */
+
 .chicha_header{ /* APLICA A TODO EL HEADER */
 	grid-area: area_chicha_header;
 	display: flex; /* MOSTRAMOS EL LOGO, EL NAV Y REDES SOCIALES DE UNA MANERA FLEXIBLE A SU CONTENEDOR */
@@ -94,6 +130,7 @@ a{
 .chicha_servicios_menu > li:hover{ /* APLICA A LOS LI DEL SUB MENÚ SERVICIOS CUANDO EL MOUSE SE POSA SOBRE ELLOS */
 	background-color: #000000;	
 }
+
 /* FIN DEL CSS DEL HEADER */
 
 /* ----------------------------------------- */
@@ -113,7 +150,6 @@ a{
 }
 
 .chicha_main_index_elements{ /* APLICA AL MAIN DEL INDEX */
-	width: 50%;
 	display: grid;
 	background-color: rgb(255, 255, 255); /* COLOR DE FONDO DEL MAIN INDEX */
 	align-self: center;
@@ -127,19 +163,18 @@ a{
 	font-size: 20px; /* TAMAÑO DE FUENTE DE LOS LINKS */
 }
 
-.chicha_video_main video{ /* APLICA PARA QUE EL VIDEO SE EXTIENDA EN TODA LA PANTALLA */
-	width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 100%;
-}
-
 .chicha_video_main{ /* APLICA AL VIDEO DE INICIO */
 	display: flex; /* MOSTRAMOS EL VIDEO DE UNA MANERA FLEXIBLE AL CONTENEDOR */
 	justify-content: space-around; /* AJUSTAMOS EL VIDEO CON IGUALDAD DE ESPACIADO */
 	align-items: center; /* ALINEACIÓN CENTRADA DEL VIDEO */	
 }
 
+.chicha_video_main video{ /* APLICA PARA QUE EL VIDEO SE EXTIENDA EN TODA LA PANTALLA */
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
 
 .chicha_titulo h1{ /* APLICA AL H1 DEL MAIN INDEX */
 	color: rgb(0, 0, 0); /* COLOR */
@@ -165,6 +200,10 @@ a{
 	max-height: 29px;
 }
 
+.chicha_subtitulo h2{ /* APLICA A LAS IMAGENES DE ESTRELLAS DEL SUBTITULO */
+	margin-bottom: 0rem;
+}
+
 .chicha_boton_video_icon{
 	padding-bottom: 1rem;
 }
@@ -175,7 +214,6 @@ a{
 }
 
 .chicha_info_main{ /* APLICA A LA INFORMACION SECUNDARIA DEL MAIN */
-	width: 70%;
 	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
 	justify-content: space-around; /* AJUSTAMOS EL VIDEO CON IGUALDAD DE ESPACIADO */
 	justify-self: center;
@@ -192,6 +230,7 @@ a{
 }
 
 .chicha_info_main_carrusel{	
+	width: 100%;
 	display: flex;	
 	justify-content: center;
 	align-items: center;		
@@ -1118,9 +1157,6 @@ a{
 
 @media only screen and (max-width:600px){
 
-	.chicha_main_index_elements{
-		width: 70%;
-	}
 
 	.chicha_titulo h1 {
 		font-size: 40px;
