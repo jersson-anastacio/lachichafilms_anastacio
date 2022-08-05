@@ -324,7 +324,7 @@ a{
 }
 
 .chicha_info_page_nosotros {
-	width: 70%;
+	width: 100%;
     display: flex;
     justify-content: space-around;
     justify-self: center;
@@ -337,7 +337,7 @@ a{
 
 .chicha_info_page_nosotros_descripcion{
 	grid-area: area_main_nosotros_descripcion;
-	width: 70%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -350,6 +350,7 @@ a{
 }
 
 .chicha_info_main_carrusel_nosotros{
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -376,6 +377,13 @@ a{
 	border-bottom: 1px solid #000000; 
 }
 
+.chicha_nuestro_equipo h2{
+	font-weight: bold;
+}
+
+
+
+
 .chicha_avatar_container{
 	display: grid;
 	grid-area: area_main_nosotros_equipo;
@@ -388,14 +396,22 @@ a{
 	line-height: 25px;	
  }
  
- .chicha_avatar{
+.card{
+	width: auto;
+	max-width: 100%;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	justify-self: center;
+	padding: 1rem 1rem;
+}
+
+.chicha_avatar{
 	width: auto;
 	text-align: center;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	padding: 1.5rem 1.5rem;
  }
 
- .chicha_avatar img{
+.chicha_avatar img{
 	width: auto;
 	height: auto;
 	max-width: 100px;
@@ -1212,8 +1228,21 @@ a{
         justify-content: center;
 		justify-self: center;
         align-content: center;
-		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+		gap: 2rem 2rem; /* ESPACIADO ENTRE CONTENEDORES */
     }
+
+	.card{
+		padding: 1rem 1rem;
+	}
+
+	.card h2{
+		font-size: 18px;
+	}
+
+	.card p{
+		font-size: 15px;
+		line-height: 15px;
+	}
 
 	.chicha_avatar{
 		padding: 1.5rem 1.5rem;
@@ -1231,7 +1260,7 @@ a{
 		width: 100%;
 		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
 		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
-		padding: 1rem 2rem;	
+		padding: 1rem 0rem;	
 	}
 
 	.chicha_info_page_nosotros p{ 
