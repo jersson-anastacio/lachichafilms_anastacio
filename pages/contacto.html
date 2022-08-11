@@ -24,10 +24,10 @@
                         <a href="../index.html"><img src="../images/lachichalogo.png"></a>
                     </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="fa-solid fa-star"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav text-center">
                             <li class="nav-item">
                                 <a class="nav-link" href="../index.html">INICIO</a>
                             </li>
@@ -38,7 +38,7 @@
                                 <a class="nav-link dropdown-toggle" href="../pages/servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 SERVICIOS
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu text-center">
                                     <li><a class="dropdown-item" href="../pages/servicios.html#motion_graphics">Motion Graphics</a></li>
                                     <li><a class="dropdown-item" href="../pages/servicios.html#videos">Videos</a></li>
                                     <li><a class="dropdown-item" href="../pages/servicios.html#fotografia">Fotografía</a></li>
@@ -101,123 +101,124 @@
         <!-- CIERRA LA BARRA DE NAVEGACIÓN CON EL LOGO DEL SITIO -->
         <!-- EMPIEZA LA INFORMACIÓN DE LA PAGINA CONTACTO -->
         <main>
-            <section class="chicha_main_contacto">
-                <section class="chicha_title_page_contacto">
-                    <div>
-                        <h1>CONTÁCTANOS</h1>
+            <section class="container">
+                <section class="chicha_main_contacto">
+                    <section class="chicha_title_page_contacto">
+                        <div>
+                            <h1>CONTÁCTANOS</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nam. Repudiandae inventore nemo quis officia est laboriosam atque quasi saepe maxime cum unde non, laborum doloremque necessitatibus. Eaque, aspernatur deserunt.</p>
+                        </div>
+                    </section>
+                    <section class="chicha_info_page_contacto">
+                        <div>
+                            <div>
+                                <p>CENTRAL TELEFÓNICA</p>
+                            </div>
+                            <div>
+                                <a href="tel:+51 73 660 651"><i class="fa-solid fa-phone"></i>+51 73 660 651</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p>CORREO ELECTRÓNICO</p>
+                            </div>
+                            <div>
+                                <a href="mailto:jersson@lachichafilms.com"><i class="fa-solid fa-envelope"></i>jersson@lachichafilms.com</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p>CELULAR/WHATSAPP</p>
+                            </div>
+                            <div>
+                                <a href="tel:+51 954 952 637"><i class="fa-brands fa-whatsapp"></i>+51 954 952 637</a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="chicha_subtitle_page_contacto">
+                        <h3>TRABAJEMOS JUNTOS</h3>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, repellendus voluptatum vel facilis esse odio deserunt totam? Amet dolorem nostrum dolorum, provident corporis repellat cum reiciendis voluptatem atque temporibus. Provident?</P>
+                    </div>
+                    <!-- EMPIEZA EL FORMULARIO DE CONTACTO -->
+                    <div class="chicha_form_container">
+                        <div class="chicha_form_container_info">
+                            <form action="#">
+                                <fieldset>
+                                    <legend>ESCRÍBENOS</legend>
+                                    <div class="chicha_form_container_elements">
+                                        <div>
+                                            <label for="name">Nombres</label>
+                                            <input class="chicha_form_textbox" type="text" placeholder="Ingresa tus nombres">
+                                        </div>
+                                        <div>
+                                            <label for="last_name">Apellidos</label>
+                                            <input class="chicha_form_textbox" type="text" placeholder="Ingresa tu apellidos">
+                                        </div>
+                                        <div>
+                                            <label for="phone">Celular</label>
+                                            <input class="chicha_form_textbox" type="tel" placeholder="Ingresa tu número de celular">
+                                        </div>
+                                        <div>
+                                            <label for="email">Correo Eletrónico</label>
+                                            <input class="chicha_form_textbox" type="email" placeholder="Ingresa tu correo eletrónico">
+                                        </div>
+                                        <div>
+                                            <label for="comment">Comentario</label>
+                                            <textarea class="chicha_form_textbox_comment" name="" id="" cols="30" rows="10" placeholder="Escriba su mensaje..."></textarea>
+                                        </div>
+                                        <div class="chicha_form_box_sex">
+                                            <label for="sex">Sexo</label>
+                                            <select name="" id="">
+                                                <option value="#">...</option>
+                                                <option value="#">Mujer</option>
+                                                <option value="#">Hombre</option>
+                                                <option value="#">Prefiero no decirlo</option>
+                                                <option value="#">Otro</option>
+                                            </select>
+                                        </div>
+                                        <div class="chicha_form_info_adult">
+                                            <label for="adult">¿Eres mayor de edad?</label>
+                                            Sí <input type="radio" name="adult">
+                                            No <input type="radio" name="adult">
+                                        </div>
+                                        <div class="chicha_form_info_check">
+                                            <label for="information">¿Deseas que te envíemos información relacionada?</label>
+                                            <input type="checkbox">
+                                        </div>
+                                        <div class="chicha_form_container_boton">
+                                            <input class="chicha_form_boton btn btn-success" type="submit" value="Enviar">
+                                            <input class="chicha_form_boton btn btn-success" type="reset" value="Limpiar campos">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="chicha_form_text_page_contacto">
+                            <div>
+                                <p>Si deseas consultar mayor información sobre nuestros servicios o tienes una duda al respecto, no dudes en solicitar una consultoría gratuita y uno de nuestros profesionales te contactará a la brevedad.</p>
+                            </div>
+                            <div class= "chicha_redes_align_page_contacto">
+                                <div>
+                                    <h3>SÍGUENOS</h3>
+                                </div>
+                                <div>
+                                    <a href="https://www.facebook.com/lachichafilms/" target="none"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
+                                    <a href="https://www.instagram.com/lachichafilms/" target="none"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                                    <a href="https://vimeo.com/lachichafilms" target="none"><i class="fa-brands fa-vimeo-v fa-2x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TERMINA EL FORMULARIO DE CONTACTO -->
+                    <div class="chicha_title_estamos_aqui">
+                        <h1>ESTAMOS AQUÍ</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nam. Repudiandae inventore nemo quis officia est laboriosam atque quasi saepe maxime cum unde non, laborum doloremque necessitatibus. Eaque, aspernatur deserunt.</p>
                     </div>
-                </section>
-                <section class="chicha_info_page_contacto">
-                    <div>
-                        <div>
-                            <p>CENTRAL TELEFÓNICA</p>
-                        </div>
-                        <div>
-                            <a href="tel:+51 73 660 651"><i class="fa-solid fa-phone"></i>+51 73 660 651</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <p>CORREO ELECTRÓNICO</p>
-                        </div>
-                        <div>
-                            <a href="mailto:jersson@lachichafilms.com"><i class="fa-solid fa-envelope"></i>jersson@lachichafilms.com</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <p>CELULAR/WHATSAPP</p>
-                        </div>
-                        <div>
-                            <a href="tel:+51 954 952 637"><i class="fa-brands fa-whatsapp"></i>+51 954 952 637</a>
-                        </div>
-                    </div>
-                </section>
-                <div class="chicha_subtitle_page_contacto">
-                    <h3>TRABAJEMOS JUNTOS</h3>
-                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, repellendus voluptatum vel facilis esse odio deserunt totam? Amet dolorem nostrum dolorum, provident corporis repellat cum reiciendis voluptatem atque temporibus. Provident?</P>
-                </div>
-                <!-- EMPIEZA EL FORMULARIO DE CONTACTO -->
-                <div class="chicha_form_container">
-                    <div class="chicha_form_container_info">
-                        <form action="#">
-                            <fieldset>
-                                <legend>ESCRÍBENOS</legend>
-                                <div class="chicha_form_container_elements">
-                                    <div>
-                                        <label for="name">Nombres</label>
-                                        <input class="chicha_form_textbox" type="text" placeholder="Ingresa tus nombres">
-                                    </div>
-                                    <div>
-                                        <label for="last_name">Apellidos</label>
-                                        <input class="chicha_form_textbox" type="text" placeholder="Ingresa tu apellidos">
-                                    </div>
-                                    <div>
-                                        <label for="phone">Celular</label>
-                                        <input class="chicha_form_textbox" type="tel" placeholder="Ingresa tu número de celular">
-                                    </div>
-                                    <div>
-                                        <label for="email">Correo Eletrónico</label>
-                                        <input class="chicha_form_textbox" type="email" placeholder="Ingresa tu correo eletrónico">
-                                    </div>
-                                    <div>
-                                        <label for="comment">Comentario</label>
-                                        <textarea class="chicha_form_textbox_comment" name="" id="" cols="30" rows="10" placeholder="Escriba su mensaje..."></textarea>
-                                    </div>
-
-                                    <div class="chicha_form_box_sex">
-                                        <label for="sex">Sexo</label>
-                                        <select name="" id="">
-                                            <option value="#">...</option>
-                                            <option value="#">Mujer</option>
-                                            <option value="#">Hombre</option>
-                                            <option value="#">Prefiero no decirlo</option>
-                                            <option value="#">Otro</option>
-                                        </select>
-                                    </div>
-                                    <div class="chicha_form_info_adult">
-                                        <label for="adult">¿Eres mayor de edad?</label>
-                                        Sí <input type="radio" name="adult">
-                                        No <input type="radio" name="adult">
-                                    </div>
-                                    <div class="chicha_form_info_check">
-                                        <label for="information">¿Deseas que te envíemos información relacionada?</label>
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="chicha_form_container_boton">
-                                        <input class="chicha_form_boton btn btn-success" type="submit" value="Enviar">
-                                        <input class="chicha_form_boton btn btn-success" type="reset" value="Limpiar campos">
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div class="chicha_form_text_page_contacto">
-                        <div>
-                            <p>Si deseas consultar mayor información sobre nuestros servicios o tienes una duda al respecto, no dudes en solicitar una consultoría gratuita y uno de nuestros profesionales te contactará a la brevedad.</p>
-                        </div>
-                        <div class= "chicha_redes_align_page_contacto">
-                            <div>
-                                <h3>SÍGUENOS</h3>
-                            </div>
-                            <div>
-                                <a href="https://www.facebook.com/lachichafilms/" target="none"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
-                                <a href="https://www.instagram.com/lachichafilms/" target="none"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                                <a href="https://vimeo.com/lachichafilms" target="none"><i class="fa-brands fa-vimeo-v fa-2x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- TERMINA EL FORMULARIO DE CONTACTO -->
-                <div class="chicha_title_estamos_aqui">
-                    <h1>ESTAMOS AQUÍ</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nam. Repudiandae inventore nemo quis officia est laboriosam atque quasi saepe maxime cum unde non, laborum doloremque necessitatibus. Eaque, aspernatur deserunt.</p>
-                </div>
                 
-                <div class="chicha_mapa">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1181.3379120667753!2d-80.64479391893745!3d-5.178865445481159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904a1aa2a7f5e9f3%3A0xe0adc372229d1f6d!2sIgnacio%20Merino%2C%20Piura%2020009!5e0!3m2!1ses-419!2spe!4v1656881873030!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                    <div class="chicha_mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1181.3379120667753!2d-80.64479391893745!3d-5.178865445481159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904a1aa2a7f5e9f3%3A0xe0adc372229d1f6d!2sIgnacio%20Merino%2C%20Piura%2020009!5e0!3m2!1ses-419!2spe!4v1656881873030!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
             </section>
         </main>
         <!-- TERMINA LA INFORMACIÓN DE LA PAGINA CONTACO -->

@@ -1,0 +1,118 @@
+/* ----------------------------------------- */
+
+/* INICIO DEL CSS DEL HEADER */
+
+/* HEADER BOOTSTRAP */
+
+.nav-link{
+	font-size: 20px;
+}
+
+.nav-item {
+	padding: 0px 10px;
+}
+
+.navbar {
+	padding-top: 20px;
+    --bs-navbar-padding-x: 3rem;
+    --bs-navbar-padding-y: 1.5rem;
+	border-bottom: 3px solid #cb2459 /* BORDE INFERIOR DEL HEADER */	
+}
+
+.navbar-nav {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.container-fluid img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
+	width: auto;
+	height: auto;
+	max-width: 183px;
+	max-height: 80px;
+}
+
+.chicha_redes_header{ 
+	display: flex;
+	justify-content: center;
+}
+
+.chicha_redes_header a{ 
+	padding: 10px;
+}
+
+
+.navbar-toggler .fa-solid, .fas {
+    color:#cb2459;
+	font-size: 30px;
+}
+
+.chicha_redes_header a:hover {
+    color:#cb2459;
+}
+
+.nav-link:hover{
+	color:#cb2459;
+}
+
+.dropdown-item:hover{
+	background:#cb2459;
+	color: white;
+}
+
+
+/* HEADER ANTIGUO */
+
+.chicha_header{ /* APLICA A TODO EL HEADER */
+	grid-area: area_chicha_header;
+	display: flex; /* MOSTRAMOS EL LOGO, EL NAV Y REDES SOCIALES DE UNA MANERA FLEXIBLE A SU CONTENEDOR */
+	justify-content: space-evenly; /* AJUSTAMOS LOS 3 ELEMENTOS EN DISTANCIAS IGUALES */
+	align-items: center; /* ALINEAMOS LOS 3 ELEMENTOS EN EL CENTRO */
+	position: sticky; /* EL HEADER SIEMPRE ES VISIBLE CUANDO SE HACE SCROLL */
+	z-index: 10; /* ESTA PROPIEDAD ES PARA QUE EL HEADER ESTE POR ENCIMA DEL VIDEO */
+	top: 0px; /* EL HEADER SIEMPRE ES VISIBLE CUANDO SE HACE SCROLL EN LA PARTE SUPERIOR */
+	background-color: black; /* COLOR DE FONDO DEL HEADER */
+	font-size: 20px; /* TAMAÑO DE FUENTE DEL HEADER */
+	padding: 1.5rem 0rem; /* ESPACIO DE RELLENO DEL HEADER EN VERTICAL Y HORIZONTAL */
+	border-bottom: 3px solid #cb2459 /* BORDE INFERIOR DEL HEADER */	
+}
+
+.chicha_header li{ /* APLICA A LOS LI DEL HEADER */
+	position: relative; /* POSICIÓN RELATIVA DE LOS LI */
+	display: inline-block; /* POSICIÓN EN LINEA DE LOS LI */
+	margin: 5px 1rem; /* MÁRGENES PARA SEPARAR LOS LI */
+	padding: 10px; /* ESPACIO DE RELLENO DE LOS LI */
+}
+
+.chicha_logo_color img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
+	width: auto;
+	height: auto;
+	max-width: 183px;
+	max-height: 80px;
+}
+
+.chicha_header a{ /* APLICA A LOS LINKS DEL HEADER */
+	color: white; /* COLOR DE LOS LINKS DEL HEADER */
+}
+
+.chicha_menu > li:hover{ /* APLICA A LOS LI DEL MENÚ CUANDO EL MOUSE SE POSA SOBRE ELLOS */
+	background-color: #cb2459; /* COLOR DE FONDO DE LOS LI */
+	transition: all 0.5s
+}
+
+.chicha_servicios_menu{ /* SUB MENU DE LA PÁGINA SERVICIOS */
+	position: absolute; /* POSICIÓN ABSOLUTA */
+	display: none; /* NO SE MUESTRA EL SUB MENÚ */
+	width: 250px; /* ANCHO DEL SUB MENÚ */
+	background-color: rgba(255, 0, 0, 0.5); /* COLOR DEL SUB MENÚ */	
+}
+
+.chicha_menu li:hover .chicha_servicios_menu{ /* MUESTRA EL SUB MENU SERVICIOS CUANDO EL MOUSE SE POSA SOBRE EL LI SERVICIOS */
+	display: flex; /* MOSTRAMOS SUB MENÚ SERVICIOS DE UNA MANERA FLEXIBLE A SU CONTENEDOR */
+	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+}
+
+.chicha_servicios_menu > li:hover{ /* APLICA A LOS LI DEL SUB MENÚ SERVICIOS CUANDO EL MOUSE SE POSA SOBRE ELLOS */
+	background-color: #000000;	
+}
+
+/* FIN DEL CSS DEL HEADER */

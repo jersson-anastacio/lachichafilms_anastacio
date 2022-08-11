@@ -1,0 +1,66 @@
+/* CSS LA CHICHA FILMS - JERSSON ANASTACIO */
+
+/* ----------------------------------------- */
+
+/* IMPORTAMOS LA FUENTE DE GOOGLE */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* ELIMINAMOS LOS MÁRGENES DEL NAVEGADOR */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* APLICAMOS A TODO EL BODY LA FUENTE */
+body {
+	font-family: "Montserrat", sans-serif;
+	min-height: 100vh;	
+}
+/* EL FOOTER ESTARÁ SIEMPRE ABAJO */
+footer {
+	margin-top: auto;
+}
+/* BORRAMOS EL SUBRAYADO DE LOS LINKS */
+a{
+	text-decoration: none;
+	color: #ffffff;
+}
+/* GRILLA DEL BODY */
+#chicha_grilla_body {
+	display: grid;
+	grid-template-columns: 100%; /* 1 SOLA COLUMNA QUE ABARCA EL 100% DEL BODY */
+	grid-template-rows: auto 1fr auto; /* DEFINIMOS LAS FILAS: HACEMOS QUE EL HEADER SE POSICIONE AUTOMATICAMENTE ARRIBA DEL BODY, EL MAIN TIENE 1 FRACCION DEL BODY, Y EL FOOTER SE POSICIONARÁ AUTOMATICAMENTE AL FINAL DEL BODY */
+	grid-template-areas: "area_chicha_header"
+						 "area_chicha_main"
+						 "area_chicha_footer";
+}
+
+/* MEDIA QUERY 600 PX BODY (HEADER, MAIN Y FOOTER) */
+
+@media only screen and (max-width:600px){
+	
+	.chicha_header{
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+		position: relative
+	}
+
+	.chicha_menu{
+		display: flex;
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+	}
+	
+	ul{
+        flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+	.chicha_footer{
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+	}
+}
+
+
+
