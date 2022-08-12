@@ -2,8 +2,9 @@
 
 /* ----------------------------------------- */
 
-/* IMPORTAMOS LA FUENTE DE GOOGLE */
+/* IMPORTAMOS LAS FUENTES DE GOOGLE */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
 /* ELIMINAMOS LOS MÁRGENES DEL NAVEGADOR */
 *{
@@ -35,32 +36,9 @@ a{
 						 "area_chicha_footer";
 }
 
-/* MEDIA QUERY 600 PX BODY (HEADER, MAIN Y FOOTER) */
 
-@media only screen and (max-width:600px){
-	
-	.chicha_header{
-		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
-		position: relative
-	}
 
-	.chicha_menu{
-		display: flex;
-		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	}
-	
-	ul{
-        flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-        justify-content: space-evenly;
-        align-items: center;
-    }
 
-	.chicha_footer{
-		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
-	}
-}
 
 
 

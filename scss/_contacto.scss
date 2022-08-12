@@ -15,7 +15,6 @@
 	background-color:#ffffff;
 }
 
-
 .chicha_title_page_contacto{
 	width: 70%;
 	grid-area: area_main_contacto_titulo;
@@ -27,19 +26,17 @@
 	text-align: center;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-}
-
-.chicha_title_page_contacto h1{
-	color: rgb(0, 0, 0); /* COLOR */
-	font-size: 45px; /* TAMAÑO DE FUENTE */
-	padding-bottom: 1rem;
-	border-bottom: 1px solid #000000;
-}
-
-.chicha_title_page_contacto p{
-	color: rgb(0, 0, 0); /* COLOR */
-	font-size: 20px; /* TAMAÑO DE FUENTE */
-	padding-top: 2rem;
+	h1{
+		color: rgb(0, 0, 0); /* COLOR */
+		font-size: 45px; /* TAMAÑO DE FUENTE */
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #000000;
+	}
+	p{
+		color: rgb(0, 0, 0); /* COLOR */
+		font-size: 20px; /* TAMAÑO DE FUENTE */
+		padding-top: 2rem;
+	}
 }
 
 .chicha_info_page_contacto{
@@ -53,25 +50,22 @@
 	padding-top: 1rem;
 	padding-bottom: 5rem;
 	border-bottom: 1px solid #000000;
-}
-
-.chicha_info_page_contacto i{ 
-	padding-right: 10px;
-	font-size: 30px; /* AJUSTAMOS EL TAMAÑO DE LOS ICONOS DE REDES SOCIALES */
-}
-
-.chicha_info_page_contacto p{
-	padding: 1rem;
-	font-size: 20px;
-	font-weight: bold; /* PONEMOS NEGRITA A UN PARRAFO */
-}
-
-.chicha_info_page_contacto a{
-	color: #000000;
-	font-size: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	i{ 
+		padding-right: 10px;
+		font-size: 30px; /* AJUSTAMOS EL TAMAÑO DE LOS ICONOS DE REDES SOCIALES */
+	}
+	p{
+		padding: 1rem;
+		font-size: 20px;
+		font-weight: bold; /* PONEMOS NEGRITA A UN PARRAFO */
+	}
+	a{
+		color: #000000;
+		font-size: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}	
 }
 
 .chicha_subtitle_page_contacto{
@@ -86,23 +80,21 @@
 	font-size: 20px; /* TAMAÑO DE FUENTE */
 	padding-top: 3rem;
 	padding-bottom: 1rem;
-}
-
-.chicha_subtitle_page_contacto h3{
-	color: rgb(0, 0, 0); /* COLOR */
-	font-size: 25px; /* TAMAÑO DE FUENTE */
-	padding-bottom: 1rem;
-	border-bottom: 1px solid #000000;
-}
-
-.chicha_subtitle_page_contacto p{
-	color: rgb(0, 0, 0); /* COLOR */
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-size: 20px; /* TAMAÑO DE FUENTE */
-	padding-top: 3rem;
-	padding-bottom: 2rem;
+	h3{
+		color: rgb(0, 0, 0); /* COLOR */
+		font-size: 25px; /* TAMAÑO DE FUENTE */
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #000000;
+	}
+	p{
+		color: rgb(0, 0, 0); /* COLOR */
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 20px; /* TAMAÑO DE FUENTE */
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+	}
 }
 
 .chicha_form_container{
@@ -116,62 +108,81 @@
 	gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
 	padding-top: 2rem;
 	padding-bottom: 4rem;
-}
-
-.chicha_form_container form{
-	line-height: 35px;
-	font-weight:bolder
-}
-
-.chicha_form_container form fieldset{
-    padding: 1rem 1rem;
-}
-
-.chicha_form_container_elements{
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
-	flex-wrap: wrap;
-	font-weight:bolder
-}
-
-.chicha_form_box_sex{
-    text-align: center;
-}
-
-.chicha_form_info_adult{
-    text-align: center;
-}
-
-
-
-.chicha_form_textbox{
-	width: 100%;
-	height: 30px;
-	padding: 5px;
-	font-family: "Montserrat", sans-serif;
-}
-
-.chicha_form_textbox_comment{
-	width: 100%;
-	height: 300px;
-	padding: 5px;
-	font-family: "Montserrat", sans-serif;
-	resize: none;
-}
-
-.chicha_form_box_sex select{
-	font-family: "Montserrat", sans-serif;
-}
-
-.chicha_form_info_check{
-	display: flex;
-	justify-content: center;
-	text-align: center;	
-	align-items: center;
-	gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
-
+	.chicha_form_container_info{
+		form{
+			line-height: 35px;
+			font-weight:bolder;
+			fieldset{
+				padding: 1rem 1rem;
+			}
+		}
+		.chicha_form_container_elements{
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+			flex-wrap: wrap;
+			font-weight:bolder;
+			.chicha_form_textbox{
+				width: 100%;
+				height: 30px;
+				padding: 5px;
+				font-family: "Montserrat", sans-serif;
+			}
+			.chicha_form_textbox_comment{
+				width: 100%;
+				height: 300px;
+				padding: 5px;
+				font-family: "Montserrat", sans-serif;
+				resize: none;
+			}
+			.chicha_form_box_sex{
+				text-align: center;
+				select{
+					font-family: "Montserrat", sans-serif;
+				}
+			}
+			.chicha_form_info_adult{
+				text-align: center;
+			}
+			.chicha_form_info_check{
+				display: flex;
+				justify-content: center;
+				text-align: center;	
+				align-items: center;
+				gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
+			}
+		}		
+	}
+	.chicha_form_text_page_contacto{
+		width: 40%;
+		display: flex;
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
+		padding: 1rem 3rem;
+		line-height: 35px;
+		p{
+			font-size: 20px;
+		}
+		a{
+			color: #000000;	
+		}
+		.chicha_redes_align_page_contacto{
+			display: flex;
+			flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+			justify-content: center;
+			justify-content: center;
+			align-items: center;
+			gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+			font-size: 20px;
+			a{ 
+				padding: 10px;
+			}
+		}
+	}
 }
 
 .chicha_form_container_boton{
@@ -191,45 +202,6 @@
 	cursor: pointer;
 }
 
-.chicha_form_text_page_contacto{
-	width: 40%;
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
-	padding: 1rem 3rem;
-	line-height: 35px;
-}
-
-.chicha_form_text_page_contacto p{
-	font-size: 20px;
-}
-
-.chicha_form_box_sex{
-	font-family: "Montserrat", sans-serif;
-}
-
-.chicha_form_text_page_contacto a{
-	color: #000000;
-
-}
-
-.chicha_redes_align_page_contacto{
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	justify-content: center;
-	align-items: center;
-	gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
-	font-size: 20px;
-}
-
-.chicha_redes_align_page_contacto a{ 
-	padding: 10px;
-}
-
 .chicha_title_estamos_aqui{
 	width: 70%;
 	color: rgb(0, 0, 0); /* COLOR */
@@ -242,53 +214,43 @@
 	font-size: 20px; /* TAMAÑO DE FUENTE */
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-}
-
-.chicha_title_estamos_aqui h1{
-	padding-bottom: 1rem;
-	border-bottom: 1px solid #000000;
-}
-
-.chicha_title_estamos_aqui p{
-	color: rgb(0, 0, 0); /* COLOR */
-	font-size: 20px; /* TAMAÑO DE FUENTE */
-	padding-top: 2rem;
-	padding-bottom: 1rem;
+	h1{
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #000000;
+	}
+	p{
+		color: rgb(0, 0, 0); /* COLOR */
+		font-size: 20px; /* TAMAÑO DE FUENTE */
+		padding-top: 2rem;
+		padding-bottom: 1rem;
+	}
 }
 
 .chicha_mapa{
     width: 100%;
     height: 450px;
 	position: relative;
+	iframe{
+		width: 100%;
+		height: 450px;
+		border: 0px;
+	}	
 }
-
-.chicha_mapa iframe{
-	width: 100%;
-	height: 450px;
-	border: 0px;
-}
-
-/* FIN DEL CSS DE LA PÁGINA CONTÁCTO */
 
 /* ----------------------------------------- 
 
 /* MEDIA QUERY 600 PX PAGINA CONTACTO */
 
-@media only screen and (min-width:600px){
-	
-}
-
 @media only screen and (max-width:600px){
 
 	.chicha_title_page_contacto {
 		padding-bottom: 1rem;
-	}
-
-	.chicha_title_page_contacto p{
-		width: auto;
-		height: auto;
-		max-width: 100%;
-		max-height: 100%;
+		p{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
 	}
 
 	.chicha_info_page_contacto{
@@ -297,49 +259,66 @@
 		padding-bottom: 3rem;
 	}
 
-	.chicha_form_text_page_contacto {
-		width: 80%;
-		gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
-		padding: 2rem 0rem;
+	.chicha_subtitle_page_contacto{
+		width: 90%;
 	}
 
-	.chicha_redes_align_page_contacto a {
-		padding: 20px;
-	}
-	
 	.chicha_form_container{
 		width: 100%;
 		padding-top: 0rem;
 		padding-bottom: 0rem;
 		gap: 1rem;
+		.chicha_form_container_info{
+			.chicha_form_container_elements{
+				width: 100%;
+				.chicha_form_textbox{
+					width: 100%;
+					height: 30px;
+				}
+				.chicha_form_textbox_comment{
+					width: 100%;
+					height: 300px;
+				}
+				.chicha_form_box_sex{
+					text-align: center;
+					select{
+						font-family: "Montserrat", sans-serif;
+					}
+				}
+				.chicha_form_info_adult{
+					text-align: center;
+				}
+				.chicha_form_info_check{
+					display: block;
+				}
+			}		
+		}
+		.chicha_form_text_page_contacto{
+			width: 80%;
+			gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
+			padding: 2rem 0rem;
+			.chicha_redes_align_page_contacto{
+				a{ 
+					padding: 20px;
+				}
+			}
+		}
 	}
 
-	.chicha_form_container_elements {
-		width: 100%;
-	}
-	
-	.chicha_form_textbox{
-		width: 100%;
-		height: 30px;
-	}
-	
-	.chicha_form_textbox_comment{
-		width: 100%;
-		height: 300px;
-	}
-	
-	.chicha_form_info_check{
-		display: block;
+	.chicha_title_estamos_aqui{
+		width: 90%;
 	}
 
 	.chicha_mapa{
 		border: 0px;
-	}
-
-	.chicha_mapa iframe{
-		width: 100%;
-		height: 450px;
-		border: 0px;
+		iframe{
+			width: 100%;
+			height: 450px;
+			border: 0px;
+		}
 	}
 }
+
 /* ----------------------------------------- */
+
+/* FIN DEL CSS DE LA PÁGINA CONTÁCTO */

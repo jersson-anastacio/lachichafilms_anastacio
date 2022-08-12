@@ -21,23 +21,15 @@
 	text-align: center;
 	padding-top: 3rem;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #000000; 
-}
-
-.chicha_title_page_portafolio h2{
-	color: rgb(0, 0, 0); /* COLOR */
-	font-size: 20px; /* TAMAÑO DE FUENTE */
-}
-
-.chicha_title_page_portafolio h1{
-	color: rgb(0, 0, 0); /* COLOR */
-	font-size: 45px; /* TAMAÑO DE FUENTE */
-}
-
-.chicha_title_page_portafolio p{
-	color: rgb(0, 0, 0); /* COLOR */
-	font-size: 20px; /* TAMAÑO DE FUENTE */
-	padding-top: 2rem;
+	border-bottom: 1px solid #000000;
+	h1{
+		color: rgb(0, 0, 0); /* COLOR */
+		font-size: 45px; /* TAMAÑO DE FUENTE */
+	}
+	h2{
+		color: rgb(0, 0, 0); /* COLOR */
+		font-size: 20px; /* TAMAÑO DE FUENTE */
+	}
 }
 
 .chicha_descripcion_page_servicios{
@@ -52,16 +44,17 @@
 	text-align: center;
 	font-size: 25px;
     padding: 2rem 0rem;
+	p{
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+		color: rgb(0, 0, 0); /* COLOR */
+		font-size: 20px; /* TAMAÑO DE FUENTE */
+		padding-top: 2rem;
+	}
 }
 
-.chicha_descripcion_page_servicios p{
-	color: rgb(0, 0, 0); /* COLOR */
-	font-size: 20px; /* TAMAÑO DE FUENTE */
-	width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 100%;
-}
 
 .chicha_subtitle_page_portafolio{
 	color: rgb(0, 0, 0); /* COLOR */
@@ -86,15 +79,9 @@
 	gap: 5rem 1rem; /* ESPACIADO ENTRE CONTENEDORES */
 }
 
-/* FIN DEL CSS DE LA PÁGINA PORTAFOLIO */
-
 /* ----------------------------------------- */
 
 /* MEDIA QUERY 600 PX PAGINA PORTAFOLIO */
-
-@media only screen and (min-width:600px){
-
-}
 
 @media only screen and (max-width:600px){
 
@@ -104,6 +91,7 @@
 	}
 
 	.chicha_descripcion_page_servicios{
+		width: 90%;
 		padding-top: 2rem;
 		padding-bottom: 1rem;
 	}
@@ -112,18 +100,18 @@
 		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
 		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
 		padding-top: 2rem;
-		padding-bottom: 4rem;		
-	}
-
-	.chicha_iframe_vimeo div{
-		width: 90%;
-		height: 220px;
-	}
-
-
-	.chicha_iframe_vimeo iframe{ 
-
-		max-width: 100%;
-		max-height: 100%;
+		padding-bottom: 4rem;
+		div{
+			width: 90%;
+			height: 220px;
+		}
+		iframe{ 
+			max-width: 100%;
+			max-height: 100%;
+		}
 	}
 }
+
+/* ----------------------------------------- */
+
+/* FIN DEL CSS DE LA PÁGINA PORTAFOLIO */

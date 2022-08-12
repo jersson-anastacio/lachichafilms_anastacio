@@ -14,10 +14,6 @@
 	background-color:#ffffff;
 }
 
-.chicha_arte{
-	background-color: #ffffff;
-}
-
 .chicha_logo_pagina_nosotros{	
 	display: flex;
 	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
@@ -25,20 +21,41 @@
 	align-items: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	border-bottom: 1px solid #000000;	
-}
-
-.chicha_logo_color_nosotros{ 
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.chicha_logo_color_nosotros img{ 
-	width: auto;
-	height: auto;
-	max-width: 40%;
-	max-height: 40%;
+	border-bottom: 1px solid #000000;
+	.chicha_logo_color_nosotros{ 
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		img{ 
+			width: auto;
+			height: auto;
+			max-width: 40%;
+			max-height: 40%;
+		}
+	}
+	.chicha_subtitulo{ /* APLICA AL CONTENEDOR DE LA CLASE CHICHA_SUBTITULO */
+		color: rgb(0, 0, 0); /* COLOR */
+		display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+		justify-content: center; /* JUSTIFICAMOS EL CONTENIDO EN EL CENTRO */
+		align-items: center; /* ALINEACIÓN CENTRADA DE ELEMENTOS */
+		text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+		font-size: 20px; /* TAMAÑO DE FUENTE */	
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
+		img{ /* APLICA A LAS IMAGENES DE ESTRELLAS DEL SUBTITULO */
+			width: auto;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			max-width: 25px;
+			max-height: 25px;
+		}
+		h2{ /* APLICA A LAS IMAGENES DE ESTRELLAS DEL SUBTITULO */
+			margin-bottom: 0rem;
+		}
+	}
 }
 
 .chicha_quienes_somos{
@@ -47,12 +64,11 @@
 	align-items: center;
 	text-align: center;
 	padding-top: 3rem;
-	padding-bottom: 3rem; 
-}
-
-.chicha_quienes_somos h1{
-	font-size: 40px;
-	font-weight: bolder;
+	padding-bottom: 3rem;
+	h1{
+		font-size: 40px;
+		font-weight: bolder;
+	}	
 }
 
 .chicha_info_page_nosotros {
@@ -65,36 +81,32 @@
     background-color: rgb(255, 255, 255);
     gap: 3rem;
     padding: 2rem 2rem;
-}
-
-.chicha_info_page_nosotros_descripcion{
-	grid-area: area_main_nosotros_descripcion;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	padding: 0rem 1rem;
-}
-
-.chicha_info_page_nosotros_descripcion p{ 
-	font-size: calc(0.5px + 1vw);
-	line-height: calc(15px + 1vw);
-}
-
-.chicha_info_main_carrusel_nosotros{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-.chicha_info_main_carrusel_nosotros img{ 
-	width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 100%;
+	.chicha_info_page_nosotros_descripcion{
+		grid-area: area_main_nosotros_descripcion;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 0rem 1rem;
+		p{ 
+			font-size: calc(0.5px + 1vw);
+			line-height: calc(15px + 1vw);
+		}
+	}
+	.chicha_info_main_carrusel_nosotros{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		img{ 
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
 }
 
 .chicha_nuestro_equipo{
@@ -107,11 +119,10 @@
 	font-size: 25px;
 	padding-top: 3rem;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #000000; 
-}
-
-.chicha_nuestro_equipo h2{
-	font-weight: bold;
+	border-bottom: 1px solid #000000;
+	h2{
+		font-weight: bold;
+	}
 }
 
 .chicha_avatar_container{
@@ -123,89 +134,108 @@
 	justify-content: center;
 	gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
 	padding: 4rem 0rem;
-	line-height: 25px;	
+	line-height: 25px;
+	.card{
+		width: auto;
+		max-width: 100%;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+		justify-self: center;
+		padding: 0rem 1rem;
+		.card-img-top {
+			padding-top: 1rem;
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}		
+	}	
  }
  
-.card{
-	width: auto;
-	max-width: 100%;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-	justify-self: center;
-	padding: 0rem 1rem;
-}
-
-.card-img, .card-img-top {
-    padding-top: 1rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-}
-
 .card-title{
 	font-size: calc(10px + .9vw);
 }
 
+/* ----------------------------------------- */
 
-.chicha_avatar{
-	width: auto;
-	text-align: center;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-	padding: 1.5rem 1.5rem;
- }
+/* MEDIA QUERY 1400 PX PAGINA NOSOTROS */
 
-.chicha_avatar img{
-	width: auto;
-	height: auto;
-	max-width: 100px;
-	max-height: 100px;
- }
+@media only screen and (max-width:1400px){
 
-/* FIN DEL CSS DE LA PÁGINA NOSOTROS */
+	.chicha_info_page_nosotros {
+		.chicha_info_page_nosotros_descripcion{
+			p{ 
+				font-size: calc(5px + 1vw);
+				line-height: calc(10px + 1vw);
+			}
+		}
+	}
+
+	.chicha_avatar_container{
+		.card{
+			padding: 0rem 0rem;	
+		}	
+	 }
+}
 
 /* ----------------------------------------- */
 
-/* MEDIA QUERY 992 PX PAGINA NOSOTROS */
+/* MEDIA QUERY 991 PX PAGINA NOSOTROS */
 
-@media only screen and (max-width:992px){
+@media only screen and (max-width:991px){
 
-    .card{
-        padding: 0rem 0rem;
-    }
-
-	.chicha_info_page_nosotros{
-		width: 100%;
-		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
-		padding: 1rem 0rem;	
-	}
-
-	.chicha_info_page_nosotros p{ 
-		font-size: 18px;
-		line-height: 25px;
+	.chicha_logo_pagina_nosotros{	
+		.chicha_logo_color_nosotros{ 
+			img{ 
+				max-width: 50%;
+				max-height: 50%;
+			}
+		}	
 	}
 
 	.chicha_quienes_somos{
 		padding-bottom: 1rem; 
 	}
-	
-	.chicha_logo_color_nosotros img {
-		max-width: 50%;
-		max-height: 50%;
+
+	.chicha_info_page_nosotros{
+		width: 100%;
+		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
+		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+		padding: 1rem 0rem;
+		.chicha_info_page_nosotros_descripcion{
+			p{ 
+				font-size: 18px;
+				line-height: 25px;
+			}
+		}
 	}
 
-
-	.card-body {
-		padding: 1rem 0.5rem;
-	}
 }
+
+/* ----------------------------------------- */
 
 /* MEDIA QUERY 768 PX PAGINA NOSOTROS */
 
-@media only screen and (min-width:768px){
-	
-}
-
 @media only screen and (max-width:768px){
 	
+	.chicha_logo_pagina_nosotros{	
+		.chicha_logo_color_nosotros{ 
+			img{ 
+				max-width: 60%;
+				max-height: 60%;
+			}
+		}
+		.chicha_subtitulo{ 
+			img{ 
+				max-width: 20px;
+				max-height: 20px;
+			}
+		}	
+	}
+
+	.chicha_quienes_somos{
+		h1{
+			font-size: 35px;
+		}	
+	}
+
     .chicha_avatar_container{
 		width: auto;
         height: auto;
@@ -214,76 +244,52 @@
                              "cargo3 cargo4"
                              "cargo5 cargo6"
 							 "cargo7 cargo8";
-        justify-content: center;
 		justify-self: center;
         align-content: center;
+		padding: 3rem 0rem;
 		gap: 2rem 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+		.card{
+			padding: 0.5rem 0.5rem;
+			p{
+				font-size: 15px;
+				line-height: 15px;
+			}
+		}	
     }
-
-	.card{
-		padding: 0.5rem 0.5rem;
-	}
 
 	.card-title{
 		font-size: calc(15px + .9vw);
 	}
 
-	.card p{
-		font-size: 15px;
-		line-height: 15px;
+	.chicha_info_page_nosotros{
+		.chicha_info_page_nosotros_descripcion{
+			width: 90%;
+		}
 	}
-
-	.chicha_avatar_container {
-		padding: 3rem 0rem;
+	.chicha_info_page_nosotros {
+		.chicha_info_main_carrusel_nosotros{
+			width: 90%;
+			height: 90%;
+		}
 	}
-	
-	.chicha_avatar{
-		padding: 1.5rem 1.5rem;
-	 }
-	
-	.chicha_quienes_somos h1{
-		font-size: 35px;
-	}
-
-	.chicha_logo_color_nosotros img {
-		max-width: 60%;
-		max-height: 60%;
-	}
-
-	.chicha_info_page_nosotros_descripcion{
-		width: 90%;
-	}
-
-	.chicha_info_main_carrusel_nosotros{	
-		display: flex;	
-		justify-content: center;
-		align-items: center;		
-	}
-
-	.chicha_info_main_carrusel_nosotros{
-		width: 90%;
-		height: 90%;
-	}
-	.chicha_info_main_carrusel_nosotros img{	
-		width: auto;
-		height: auto;
-		max-width: 100%;
-		max-height: 100%;		
-	}
-
 }
+
+/* ----------------------------------------- */
 
 /* MEDIA QUERY 576 PX PAGINA NOSOTROS */
 
-@media only screen and (min-width:576px){
-	
-}
-
 @media only screen and (max-width:576px){
 	
-	.chicha_logo_color_nosotros img {
-		max-width: 65%;
-		max-height: 65%;
+	.chicha_logo_pagina_nosotros{	
+		.chicha_logo_color_nosotros{ 
+			img{ 
+				max-width: 65%;
+				max-height: 65%;
+			}
+		}	
 	}
-
 }
+
+/* ----------------------------------------- */
+
+/* FIN DEL CSS DE LA PÁGINA NOSOTROS */
