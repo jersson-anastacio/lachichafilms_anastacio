@@ -13,39 +13,33 @@
 }
 
 .chicha_title_page_servicios{
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	@include chicha_caja(flex, column , center, none );	
 	padding-top: 3rem;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #000000;
 	h1{
-		color: rgb(0, 0, 0); /* COLOR */
+		color: $color-secundario; /* COLOR */
 		font-size: 45px; /* TAMAÑO DE FUENTE */
+		font-family: $fuente-titulos;
 	}
 	
-	h2{
-		color: rgb(0, 0, 0); /* COLOR */
+	p{
+		color: $color-secundario; /* COLOR */
 		font-size: 20px; /* TAMAÑO DE FUENTE */
+		font-family: $fuente-titulos;
+		margin-bottom: 0rem;
 	}
 }
 
 .chicha_subtitle_page_servicios{
+	@include chicha_caja(flex, row, center, center );	
 	width: 70%;
 	grid-area: area_main_servicios_descripcion;
-	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	justify-self: center;
-	align-self: center;
-	text-align: center;
 	font-size: 25px;
-	padding-top: 1.5rem;
-	padding-bottom: 1rem;
+    padding: 2rem 0rem;
 	p{
-		color: rgb(0, 0, 0);
+		color: $color-secundario;
 		font-size: 20px;
 		width: auto;
 		height: auto;
@@ -55,26 +49,20 @@
 }
 
 .chicha_info_page_servicios_container{
+	@include chicha_caja(flex, row, space-evenly, center );	
     width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    justify-self: center;
-    align-items: center;
-    text-align: center;
     flex-wrap: wrap;
 	padding: 2rem 0rem;
 	.chicha_info_page_servicios{
-		display: flex;
-		justify-content:center;
-		align-items: center;
-		text-align: center;
+		@include chicha_caja(flex, row, center, center );	
 		gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 		h2{
 			padding-bottom: 15px;
+			font-family: $fuente-titulos;
 		}		
-		.chicha_info_page_servicios_name{
+		&_name{
 			max-width: 50%;
 			max-height: 50%;
 			p{
@@ -98,26 +86,30 @@
 }
 
 /* ----------------------------------------- */
+/* ----------------------------------------- */
 
-/* MEDIA QUERY 600 PX PAGINA SERVICIOS */
+/* MEDIA QUERY 991 PX PAGINA NOSOTROS */
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:991px){
 
-	.chicha_title_page_servicios{
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+	.chicha_info_page_servicios_container{
+		width: 100%;
 	}
-	.chicha_subtitle_page_servicios{
-		padding-top: 2rem;
-	}
+}
 
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 768 PX PAGINA NOSOTROS */
+
+@media only screen and (max-width:768px){
+	
 	.chicha_info_page_servicios_container{
 		.chicha_info_page_servicios{
 			flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
 			flex-wrap: wrap;
 			gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
 			padding: 1rem;		
-			.chicha_info_page_servicios_name{
+			&_name{
 				max-width: 100%;
 				max-height: 100%;
 			}
@@ -127,6 +119,18 @@
 			}
 		}
 	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 576 PX PAGINA SERVICIOS */
+
+@media only screen and (max-width:576px){
+
+	.chicha_info_page_servicios_container{
+		width: 95%;
+	}
+
 }
 
 /* ----------------------------------------- */

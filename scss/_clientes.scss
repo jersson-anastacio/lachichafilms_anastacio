@@ -15,43 +15,33 @@
 }
 
 .chicha_title_page_clientes{
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	@include chicha_caja(flex, column, center, none );
 	padding-top: 3rem;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #000000; 
 	h1{
-		color: rgb(0, 0, 0); /* COLOR */
+		color: $color-secundario; /* COLOR */
 		font-size: 45px; /* TAMAÑO DE FUENTE */
+		font-family: $fuente-titulos;
 	}
-	h2{
-		color: rgb(0, 0, 0); /* COLOR */
-		font-size: 20px; /* TAMAÑO DE FUENTE */
-	}
+	
 	p{
-		color: rgb(0, 0, 0); /* COLOR */
+		color: $color-secundario; /* COLOR */
 		font-size: 20px; /* TAMAÑO DE FUENTE */
-		padding-top: 2rem;
+		font-family: $fuente-titulos;
+		margin-bottom: 0rem;
 	}
 }
 
 .chicha_descripcion_page_clientes{
+	@include chicha_caja(flex, row, center, center );
 	width: 70%;
 	grid-area: area_main_clientes_descripcion;
-	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	align-self: center;
-	text-align: center;
 	font-size: 25px;
     padding: 2rem 0rem;
 	p{
-		color: rgb(0, 0, 0);
+		color: $color-secundario;
 		font-size: 20px;
 		width: auto;
 		height: auto;
@@ -61,16 +51,13 @@
 }
 
 .chicha_subtitle_page_clientes{
-	color: rgb(0, 0, 0);
+	@include chicha_caja(flex, row, center, center );
+	color: $color-secundario;
 	width: 80%;
-	display: flex;
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	text-align: center;
 	font-size: 20px;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	font-family: $fuente-titulos;
 }
 
 .chicha_clientes_grilla{
@@ -99,14 +86,10 @@
 }
 
 .chicha_subtitle_end_page_clientes{
+	@include chicha_caja(flex, row, center, center );
 	width: 80%;
-	color: rgb(0, 0, 0); /* COLOR */
-	display: flex;
+	color: $color-secundario; /* COLOR */
 	flex-wrap: wrap;
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	text-align: center;
 	font-size: 20px; /* TAMAÑO DE FUENTE */
 	padding-top: 2rem;
 	padding-bottom: 4rem;
@@ -114,9 +97,42 @@
 
 /* ----------------------------------------- */
 
-/* MEDIA QUERY 600 PX PAGINA CLIENTES */
+/* MEDIA QUERY 1200 PX PAGINA CLIENTES */
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:1200px){
+
+	.chicha_clientes_grilla{
+		grid-template-columns: 25% 25% 25% 25%;
+		grid-template-rows: 18% 18% 18% 18% 18%;
+		grid-template-areas: "cliente_uno cliente_dos cliente_tres cliente_cuatro"
+							 "cliente_cinco cliente_seis cliente_siete cliente_ocho" 
+							 "cliente_nueve cliente_diez cliente_once cliente_doce"
+							 "cliente_trece cliente_catorce cliente_quince cliente_dieciseis"
+							 "cliente_diecisiete cliente_dieciocho cliente_diecinueve cliente_veinte";
+		.chicha_cliente{
+		padding: 3rem;
+		}
+	}	
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 992 PX PAGINA CLIENTES */
+
+@media only screen and (max-width:992px){
+
+	.chicha_clientes_grilla{
+		.chicha_cliente{
+		padding: 2.5rem;
+		}
+	}	
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 768 PX PAGINA CLIENTES */
+
+@media only screen and (max-width:768px){
 
 	.chicha_title_page_clientes{
 		padding-top: 2rem;
@@ -154,6 +170,19 @@
 							 "cliente_quince cliente_dieciseis"
 							 "cliente_diecisiete cliente_dieciocho"
 							 "cliente_diecinueve cliente_veinte";
+	}	
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 400 PX PAGINA CLIENTES */
+
+@media only screen and (max-width:400px){
+	
+	.chicha_clientes_grilla{
+		.chicha_cliente{
+		padding: 2rem;
+		}
 	}	
 }
 

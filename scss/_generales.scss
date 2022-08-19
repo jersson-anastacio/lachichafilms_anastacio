@@ -14,8 +14,8 @@
 }
 /* APLICAMOS A TODO EL BODY LA FUENTE */
 body {
-	font-family: "Montserrat", sans-serif;
-	min-height: 100vh;	
+	font-family: $fuente-secundaria;
+	min-height: 100vh;
 }
 /* EL FOOTER ESTARÁ SIEMPRE ABAJO */
 footer {
@@ -35,6 +35,37 @@ a{
 						 "area_chicha_main"
 						 "area_chicha_footer";
 }
+
+/* CLASE EXTEND PARA CENTRAR */
+.chicha_center{
+	justify-content:center;
+	align-items: center;
+	align-self: center;
+	justify-self: center;	
+	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+}
+
+
+/* CLASE MIXIN PARA LAS CAJAS
+
+$desplegar: espera el valor flex para una caja flexible
+$desplegar_direccion: espera column para vertical o row para horizontal
+$justificacion_contenido: espera valores como start, end, center, space-around, space-betwen, space-evenly
+$justificacion_hijo: espera valores como start, end, center, stretch
+
+*/
+
+@mixin chicha_caja($desplegar , $desplegar_direccion , $justificacion_contenido , $justificacion_hijo){
+	display: $desplegar;
+	flex-direction: $desplegar_direccion;
+	justify-content: $justificacion_contenido;
+	justify-self: $justificacion_hijo;
+	align-items: center;
+	text-align: center;
+}
+
+
+
 
 
 

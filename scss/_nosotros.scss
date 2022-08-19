@@ -15,17 +15,12 @@
 }
 
 .chicha_logo_pagina_nosotros{	
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	align-items: center;
+	@include chicha_caja(flex, column , center , center );
 	padding-top: 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid #000000;
 	.chicha_logo_color_nosotros{ 
 		width: 100%;
-		display: flex;
-		justify-content: center;
 		img{ 
 			width: auto;
 			height: auto;
@@ -34,11 +29,8 @@
 		}
 	}
 	.chicha_subtitulo{ /* APLICA AL CONTENEDOR DE LA CLASE CHICHA_SUBTITULO */
-		color: rgb(0, 0, 0); /* COLOR */
-		display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
-		justify-content: center; /* JUSTIFICAMOS EL CONTENIDO EN EL CENTRO */
-		align-items: center; /* ALINEACIÓN CENTRADA DE ELEMENTOS */
-		text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+		@include chicha_caja(flex, row , center, center );	
+		color: $color-secundario; /* COLOR */
 		font-size: 20px; /* TAMAÑO DE FUENTE */	
 		padding-top: 1rem;
 		padding-bottom: 1rem;
@@ -46,9 +38,6 @@
 		img{ /* APLICA A LAS IMAGENES DE ESTRELLAS DEL SUBTITULO */
 			width: auto;
 			height: auto;
-			display: flex;
-			justify-content: center;
-			align-items: center;
 			max-width: 25px;
 			max-height: 25px;
 		}
@@ -59,12 +48,10 @@
 }
 
 .chicha_quienes_somos{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	@include chicha_caja(flex, row , center, center );
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+	font-family: $fuente-titulos;
 	h1{
 		font-size: 40px;
 		font-weight: bolder;
@@ -72,22 +59,14 @@
 }
 
 .chicha_info_page_nosotros {
+	@include chicha_caja(flex, row , space-around, center );
 	width: 100%;
-    display: flex;
-    justify-content: space-around;
-    justify-self: center;
-    align-items: center;
-    text-align: center;
     background-color: rgb(255, 255, 255);
     gap: 3rem;
     padding: 2rem 2rem;
-	.chicha_info_page_nosotros_descripcion{
+	&_descripcion{
 		grid-area: area_main_nosotros_descripcion;
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
 		padding: 0rem 1rem;
 		p{ 
 			font-size: calc(0.5px + 1vw);
@@ -95,11 +74,8 @@
 		}
 	}
 	.chicha_info_main_carrusel_nosotros{
+		@include chicha_caja(flex, row , center, center );		
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
 		img{ 
 			width: auto;
 			height: auto;
@@ -110,16 +86,13 @@
 }
 
 .chicha_nuestro_equipo{
+	@include chicha_caja(flex, row , center, center );	
 	width: 70%;
-	display: flex;
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	text-align: center;
 	font-size: 25px;
 	padding-top: 3rem;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #000000;
+	font-family: $fuente-titulos;
 	h2{
 		font-weight: bold;
 	}
@@ -141,6 +114,12 @@
 		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 		justify-self: center;
 		padding: 0rem 1rem;
+		&:hover{
+			color:white;
+			transform: scale (1,1);
+			transition: all 0.5s;
+			background-color: $color-principal;			
+		}		
 		.card-img-top {
 			padding-top: 1rem;
 			padding-left: 1.5rem;
@@ -151,6 +130,8 @@
  
 .card-title{
 	font-size: calc(10px + .9vw);
+	font-weight: bold;
+	
 }
 
 /* ----------------------------------------- */
@@ -160,7 +141,7 @@
 @media only screen and (max-width:1400px){
 
 	.chicha_info_page_nosotros {
-		.chicha_info_page_nosotros_descripcion{
+		&_descripcion{
 			p{ 
 				font-size: calc(5px + 1vw);
 				line-height: calc(10px + 1vw);
@@ -199,14 +180,13 @@
 		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
 		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
 		padding: 1rem 0rem;
-		.chicha_info_page_nosotros_descripcion{
+		&_descripcion{
 			p{ 
 				font-size: 18px;
 				line-height: 25px;
 			}
 		}
 	}
-
 }
 
 /* ----------------------------------------- */
@@ -262,7 +242,7 @@
 	}
 
 	.chicha_info_page_nosotros{
-		.chicha_info_page_nosotros_descripcion{
+		&_descripcion{
 			width: 90%;
 		}
 	}
@@ -287,6 +267,10 @@
 				max-height: 65%;
 			}
 		}	
+	}
+
+	.card-title{
+		font-size: calc(13px + .9vw);
 	}
 }
 

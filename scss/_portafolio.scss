@@ -14,34 +14,29 @@
 }
 
 .chicha_title_page_portafolio{
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	@include chicha_caja(flex, column, center, none );
 	padding-top: 3rem;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #000000;
 	h1{
-		color: rgb(0, 0, 0); /* COLOR */
+		color: $color-secundario; /* COLOR */
 		font-size: 45px; /* TAMAÑO DE FUENTE */
+		font-family: $fuente-titulos;
 	}
-	h2{
-		color: rgb(0, 0, 0); /* COLOR */
+	
+	p{
+		color: $color-secundario; /* COLOR */
 		font-size: 20px; /* TAMAÑO DE FUENTE */
+		font-family: $fuente-titulos;
+		margin-bottom: 0rem;
 	}
 }
 
 .chicha_descripcion_page_servicios{
+	@include chicha_caja(flex, row, center, center );
 	width: 70%;
-	grid-area: area_main_portafolio_descripcion;
-	display: flex;
+	grid-area: area_main_portafolio_descripcion;	
 	flex-wrap: wrap;
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	align-self: center;
-	text-align: center;
 	font-size: 25px;
     padding: 2rem 0rem;
 	p{
@@ -49,34 +44,78 @@
 		height: auto;
 		max-width: 100%;
 		max-height: 100%;
-		color: rgb(0, 0, 0); /* COLOR */
+		color: $color-secundario; /* COLOR */
 		font-size: 20px; /* TAMAÑO DE FUENTE */
-		padding-top: 2rem;
 	}
 }
 
-
 .chicha_subtitle_page_portafolio{
-	color: rgb(0, 0, 0); /* COLOR */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	@include chicha_caja(flex, row, center, center );
+	color: $color-secundario; /* COLOR */
 	font-size: 20px; /* TAMAÑO DE FUENTE */
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	font-family: $fuente-titulos;
 }
 
 .chicha_iframe_vimeo{
-	display: flex;
-	justify-content: space-evenly;
-	justify-self: center;
-	align-items: center;
-	text-align: center;
+	@include chicha_caja(flex, row, space-evenly, center );
 	flex-wrap: wrap;
 	padding-top: 3rem;
 	padding-bottom: 5rem;
-	gap: 5rem 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+	gap: 3rem 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 1400 PX PAGINA PORTAFOLIO */
+
+@media only screen and (max-width:1400px){
+	.chicha_iframe_vimeo{
+		width: 100%;
+		gap: 0rem 0rem;
+		padding-top: 0rem;
+		div{
+			width: 40%;
+			height: 40%;
+		}
+		iframe{ 
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 992 PX PAGINA PORTAFOLIO */
+
+@media only screen and (max-width:992px){
+	.chicha_iframe_vimeo{
+		gap: 3rem 0rem;
+		div{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 768 PX PAGINA PORTAFOLIO */
+
+@media only screen and (max-width:768px){
+
+	.chicha_descripcion_page_servicios{
+		width: 90%;
+		padding-top: 2rem;
+		padding-bottom: 1rem;
+	}
+
+	.chicha_iframe_vimeo{
+		gap: 0rem 0rem;
+	}
 }
 
 /* ----------------------------------------- */
@@ -90,19 +129,13 @@
 		padding-bottom: 2rem;
 	}
 
-	.chicha_descripcion_page_servicios{
-		width: 90%;
-		padding-top: 2rem;
-		padding-bottom: 1rem;
-	}
-
 	.chicha_iframe_vimeo{
 		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
 		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
 		padding-top: 2rem;
 		padding-bottom: 4rem;
 		div{
-			width: 90%;
+			width: 95%;
 			height: 220px;
 		}
 		iframe{ 

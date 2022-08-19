@@ -16,36 +16,28 @@
 }
 
 .chicha_title_page_contacto{
+	@include chicha_caja(flex, column, center, center );
 	width: 70%;
 	grid-area: area_main_contacto_titulo;
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	text-align: center;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 	h1{
-		color: rgb(0, 0, 0); /* COLOR */
+		color: $color-secundario; /* COLOR */
 		font-size: 45px; /* TAMAÑO DE FUENTE */
 		padding-bottom: 1rem;
 		border-bottom: 1px solid #000000;
+		font-family:$fuente-titulos;
 	}
 	p{
-		color: rgb(0, 0, 0); /* COLOR */
+		color: $color-secundario; /* COLOR */
 		font-size: 20px; /* TAMAÑO DE FUENTE */
 		padding-top: 2rem;
 	}
 }
 
 .chicha_info_page_contacto{
+	@include chicha_caja(flex, row, center, center );
     width: 90%;
-	display: flex;
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	text-align: center;
 	gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
 	padding-top: 1rem;
 	padding-bottom: 5rem;
@@ -69,28 +61,21 @@
 }
 
 .chicha_subtitle_page_contacto{
+	@include chicha_caja(flex, column, center, center );
 	width: 70%;
-	color: rgb(0, 0, 0); /* COLOR */
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	text-align: center;
+	color: $color-secundario; /* COLOR */
 	font-size: 20px; /* TAMAÑO DE FUENTE */
 	padding-top: 3rem;
 	padding-bottom: 1rem;
-	h3{
-		color: rgb(0, 0, 0); /* COLOR */
-		font-size: 25px; /* TAMAÑO DE FUENTE */
+	h2{
+		color: $color-secundario; /* COLOR */
+		font-size: 32px; /* TAMAÑO DE FUENTE */
 		padding-bottom: 1rem;
 		border-bottom: 1px solid #000000;
+		font-family: $fuente-titulos;
 	}
 	p{
-		color: rgb(0, 0, 0); /* COLOR */
-		justify-content: center;
-		align-items: center;
-		text-align: center;
+		color: $color-secundario; /* COLOR */
 		font-size: 20px; /* TAMAÑO DE FUENTE */
 		padding-top: 3rem;
 		padding-bottom: 2rem;
@@ -98,28 +83,25 @@
 }
 
 .chicha_form_container{
-	display: flex;
+	@include chicha_caja(flex, row, center, center );
 	flex-wrap: wrap;
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	align-self: center;
 	text-align: start;
 	gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
 	padding-top: 2rem;
 	padding-bottom: 4rem;
-	.chicha_form_container_info{
+	&_info{
 		form{
 			line-height: 35px;
 			font-weight:bolder;
 			fieldset{
-				padding: 1rem 1rem;
+				padding: 2rem 2rem;
+				color: $color-secundario;
+				background-color: rgba(8, 95, 122, 0.4);
+				border-radius: 15px;
 			}
 		}
 		.chicha_form_container_elements{
 			width: 100%;
-			justify-content: center;
-			align-items: center;
 			gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
 			flex-wrap: wrap;
 			font-weight:bolder;
@@ -146,21 +128,14 @@
 				text-align: center;
 			}
 			.chicha_form_info_check{
-				display: flex;
-				justify-content: center;
-				text-align: center;	
-				align-items: center;
+				@include chicha_caja(flex, row, center, center );
 				gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
 			}
 		}		
 	}
 	.chicha_form_text_page_contacto{
+		@include chicha_caja(flex, column, center, center );
 		width: 40%;
-		display: flex;
-		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-		justify-content: center;
-		align-items: center;
-		text-align: center;
 		gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
 		padding: 1rem 3rem;
 		line-height: 35px;
@@ -168,16 +143,13 @@
 			font-size: 20px;
 		}
 		a{
-			color: #000000;	
+			color: $color-secundario;	
 		}
 		.chicha_redes_align_page_contacto{
-			display: flex;
-			flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-			justify-content: center;
-			justify-content: center;
-			align-items: center;
+			@include chicha_caja(flex, column, center, center );
 			gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
 			font-size: 20px;
+			font-family: $fuente-titulos;
 			a{ 
 				padding: 10px;
 			}
@@ -192,7 +164,7 @@
 
 .chicha_form_boton{
 	width: 100%;
-	background-color: #cb2459;
+	background-color: $color-principal;
 	border: none;
 	padding: 12px;
 	color: white;
@@ -203,20 +175,16 @@
 }
 
 .chicha_title_estamos_aqui{
+	@include chicha_caja(flex, column, center, center );
 	width: 70%;
-	color: rgb(0, 0, 0); /* COLOR */
-	display: flex;
-	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center;
-	justify-self: center;
-	align-items: center;
-	text-align: center;
+	color: $color-secundario; /* COLOR */
 	font-size: 20px; /* TAMAÑO DE FUENTE */
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-	h1{
+	h2{
 		padding-bottom: 1rem;
 		border-bottom: 1px solid #000000;
+		font-family: $fuente-titulos;
 	}
 	p{
 		color: rgb(0, 0, 0); /* COLOR */
@@ -239,9 +207,20 @@
 
 /* ----------------------------------------- 
 
-/* MEDIA QUERY 600 PX PAGINA CONTACTO */
+/* MEDIA QUERY 1200 PX PAGINA CONTACTO */
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:1200px){
+
+	.chicha_info_page_contacto{
+		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 992 PX PAGINA CONTACTO */
+
+@media only screen and (max-width:992px){
 
 	.chicha_title_page_contacto {
 		padding-bottom: 1rem;
@@ -258,6 +237,22 @@
 		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
 		padding-bottom: 3rem;
 	}
+
+	.chicha_form_container{	
+		.chicha_form_text_page_contacto {
+			width: 60%;
+			gap: 2rem;
+			padding: 0rem 0rem;
+			line-height: 35px;
+		}
+	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 768 PX PAGINA CONTACTO */
+
+@media only screen and (max-width:768px){
 
 	.chicha_subtitle_page_contacto{
 		width: 90%;
@@ -317,6 +312,26 @@
 			border: 0px;
 		}
 	}
+}
+
+/* ----------------------------------------- */
+
+/* MEDIA QUERY 576 PX PAGINA CONTACTO */
+
+@media only screen and (max-width:576px){
+
+	.chicha_info_page_contacto{
+		i{ 
+			font-size: 20px; /* AJUSTAMOS EL TAMAÑO DE LOS ICONOS DE REDES SOCIALES */
+		}
+		p{
+			font-size: 18px;
+		}
+		a{
+			font-size: 18px;
+		}	
+	}
+	
 }
 
 /* ----------------------------------------- */

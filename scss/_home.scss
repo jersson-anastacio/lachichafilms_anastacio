@@ -1,5 +1,7 @@
 /* INICIO DEL CSS DE LA PÁGINA DEL INDEX */
+
 .chicha_main_index{
+	@extend .chicha_center;
 	display: grid;
 	grid-area: area_chicha_main;
 	grid-template-rows: auto auto auto auto; /* 2730px ES EL 88% DEL MAIN */
@@ -7,8 +9,6 @@
 						 "area_main_index_titulo"
 						 "area_main_index_descripcion"
 						 "area_main_index_mision";
-	justify-content: center;
-	align-items: center;
 	background-color:#ffffff;
 }
 
@@ -25,28 +25,30 @@
 }
 
 .chicha_main_index_elements{ /* APLICA AL MAIN DEL INDEX */
+	@extend .chicha_center;
 	display: grid;
 	background-color: rgb(255, 255, 255); /* COLOR DE FONDO DEL MAIN INDEX */
-	align-self: center;
-	justify-self: center;	
-	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
 	padding-top: 20px; /* RELLENO SUPERIOR */
 	a{ /* APLICA AL BOTON DE VER REEL */
-		color: rgb(0, 0, 0); /* COLOR */
+		color: black; /* COLOR */
 		font-size: 20px; /* TAMAÑO DE FUENTE DE LOS LINKS */
+		&:hover{
+			color:$color-principal;
+			transform: scale (1,1);
+			transition: all 0.5s
+		}
 	}
 	.chicha_titulo{
 		h1{ /* APLICA AL H1 DEL MAIN INDEX */
-			color: rgb(0, 0, 0); /* COLOR */
+			color: $color-secundario; /* COLOR */
 			font-size: 45px; /* TAMAÑO DE FUENTE */
+			font-family: $fuente-titulos;
 		}
 	}
 	.chicha_subtitulo{ /* APLICA AL CONTENEDOR DE LA CLASE CHICHA_SUBTITULO */
-		color: rgb(0, 0, 0); /* COLOR */
+		@extend .chicha_center;
+		color: $color-secundario; /* COLOR */
 		display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
-		justify-content: center; /* JUSTIFICAMOS EL CONTENIDO EN EL CENTRO */
-		align-items: center; /* ALINEACIÓN CENTRADA DE ELEMENTOS */
-		text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
 		font-size: 20px; /* TAMAÑO DE FUENTE */	
 		padding-top: 1rem;
 		padding-bottom: 1rem;
@@ -74,25 +76,24 @@
 }
 
 .chicha_info_main{ /* APLICA A LA INFORMACION SECUNDARIA DEL MAIN */
+	@extend .chicha_center;
 	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
 	justify-content: space-around; /* AJUSTAMOS EL VIDEO CON IGUALDAD DE ESPACIADO */
-	justify-self: center;
-	align-items: center; /* ALINEACIÓN CENTRADA DE LOS ELEMENTOS */
-	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
 	/*flex-wrap: wrap; ESTO ES PARA EL MEDIA CUERY*/ 
 	background-color: rgb(255, 255, 255); /* COLOR DE FONDO */
 	gap: 50px; /* ESPACIADO ENTRE CONTENEDORES */
 	padding: 3rem 3rem;	/* RELLENO PARA SEPARACIÓN */
-	.chicha_info_main_text{
+	&_text{
 		width: 50%;
 	}
 	.chicha_bienvenidos{ /* APLICA AL PÁRRAFO BIENVENIDOS */
 		font-size: 30px; /* TAMAÑO DE FUENTE */
+		font-family: $fuente-titulos;
 	}
 	.chicha_descripcion{ /* APLICA AL PÁRRAFO DESCRIPCIÓN */
 		font-size: large; /* TAMAÑO DE FUENTE */
 	}
-	.chicha_info_main_carrusel{	
+	&_carrusel{	
 		width: 100%;
 		display: flex;	
 		justify-content: center;
@@ -107,12 +108,10 @@
 }
 
 .chicha_mision_vision{ /* APLICA A LA SECCIÓN DE MISION Y VISION */
+	@extend .chicha_center;
 	background-color: rgb(255, 255, 255); /* COLOR DE FONDO */
 	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
 	flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-	justify-content: center; /* JUSTIFICAMOS EL CONTENIDO EN EL CENTRO */
-	align-items: center; /* ALINEACIÓN CENTRADA DE LOS ELEMENTOS */
-	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
 	font-size: large; /* TAMAÑO DE FUENTE */
 	padding: 2rem 5rem;	/* RELLENO PARA SEPARACIÓN */
 	padding-bottom: 3rem;
@@ -120,6 +119,7 @@
 	p{ /* APLICA A LOS PARRAFOS DE LA SECCIÓN DE MISION Y VISION */
 		font-size: 30px; /* TAMAÑO DE FUENTE */
 		line-height: 100px;	/* SEPARACION DE LINEAS DE PARRAFOS */
+		font-family: $fuente-titulos;
 	}
 }
 
@@ -133,7 +133,7 @@
 		width: 100%;
 		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
 		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
-		.chicha_info_main_text{
+		&_text{
 			width: 100%;
 		}
 	}

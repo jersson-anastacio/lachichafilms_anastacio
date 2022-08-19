@@ -10,62 +10,52 @@
 	padding-top: 1rem;
 	border-top: 3px solid #cb2459; /* COLOR BORDE SUPERIOR */
 	line-height: 30px; /* SEPARACION DE LINEAS DE PARRAFOS */
-	font-size: medium; /* TAMAÑO DE FUENTE */	
-}
-
-.chicha_logo_bn_footer{
-	padding-top: 30px;
-	padding-bottom: 15px;
-}
-
-.chicha_logo_bn_footer img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
-	width: auto;
-	height: auto;
-	max-width: 250px;
-	max-height: 110px;
-}
-
-.chicha_footer a{ /* APLICA A LOS LINKS DEL FOOTER */
-	color: white; /* COLOR DE LOS LINKS DEL FOOTER */
-}
-
-.chicha_footer h3{ /* APLICA TODOS LOS H3 DEL FOOTER */
-	color: white; /* COLOR */
-	bottom: 0px;
-	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
-	font-size: large; /* TAMAÑO DE FUENTE */
-	padding-bottom: 20px /* RELLENO INFERIOR */
-}
-
-.chicha_footer p{ /* APLICA TODOS LOS p DEL FOOTER */
-	color: white; /* COLOR */
-	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
-}
-
-.chicha_contacto{ /* APLICA A LOS DATOS COLOCADOS EN CONTACTANOS */
-	display: block; /* MOSTRAMOS EL ELEMENTO EN BLOQUE */
-	padding-bottom: 10px;
-
-}
-
-.chicha_info_footer{ /* APLICA A LOS DATOS COLOCADOS EN CONTACTANOS */
-	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
-	max-width: 800px; /* ANCHO MÁXIMO DEL CONTENEDOR */
-	justify-content: center; /* AJUSTAMOS EL CONTENIDO EN EL CENTRO */
-	flex-wrap: wrap; /* CON ESTA PROPIEDAD LOS ELEMENTOS SALTAN A LA SIGUIENTE LÍNEA */
-	padding-bottom: 0px; /* RELLENO INFERIOR */
-}
-
-.chicha_info_footer div{ /* APLICA A LOS DIV COLOCADOS EN CONTACTANOS */	
-	margin: 5px; /* MARGENES DE SEPARACIÓN */
-	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
-	line-height: 20px; /* SEPARACION DE LINEAS DE PARRAFOS */
-	padding-bottom: 10px; /* RELLENO INFERIOR */
-	padding-right: 20px;
-}
-
-.chicha_info_footer div i{ 
-	padding-right: 7px;
+	font-size: medium; /* TAMAÑO DE FUENTE */
+	.chicha_logo_bn_footer{
+		padding-top: 30px;
+		padding-bottom: 15px;
+		img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
+			width: auto;
+			height: auto;
+			max-width: 250px;
+			max-height: 110px;
+		}
+	}
+	a{ /* APLICA A LOS LINKS DEL FOOTER */
+		color: white; /* COLOR DE LOS LINKS DEL FOOTER */
+	}
+	h3{ /* APLICA TODOS LOS H3 DEL FOOTER */
+		color: white; /* COLOR */
+		bottom: 0px;
+		text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+		font-size: large; /* TAMAÑO DE FUENTE */
+		padding-bottom: 20px /* RELLENO INFERIOR */
+	}
+	p{ /* APLICA TODOS LOS p DEL FOOTER */
+		color: white; /* COLOR */
+		text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	}
+	.chicha_contacto{ /* APLICA A LOS DATOS COLOCADOS EN CONTACTANOS */
+		display: block; /* MOSTRAMOS EL ELEMENTO EN BLOQUE */
+		padding-bottom: 10px;
+		.chicha_info_footer{ /* APLICA A LOS DATOS COLOCADOS EN CONTACTANOS */
+			display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
+			max-width: 800px; /* ANCHO MÁXIMO DEL CONTENEDOR */
+			justify-content: center; /* AJUSTAMOS EL CONTENIDO EN EL CENTRO */
+			flex-wrap: wrap; /* CON ESTA PROPIEDAD LOS ELEMENTOS SALTAN A LA SIGUIENTE LÍNEA */
+			padding-bottom: 0px; /* RELLENO INFERIOR */
+			div{ /* APLICA A LOS DIV COLOCADOS EN CONTACTANOS */	
+				margin: 5px; /* MARGENES DE SEPARACIÓN */
+				text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+				line-height: 20px; /* SEPARACION DE LINEAS DE PARRAFOS */
+				padding-bottom: 10px; /* RELLENO INFERIOR */
+				padding-right: 20px;
+				i{ 
+					padding-right: 7px;
+				}
+			}
+		}		
+	}
 }
 
 .chicha_copyright{ /* APLICA A LOS DATOS COLOCADOS EN EL COPYRIGHT */
@@ -76,14 +66,12 @@
 	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
 	background-color: black; /* COLOR DE FONDO */
 	font-size: medium; /* TAMAÑO DE FUENTE */
-}
-
-.chicha_copyright p{ /* APLICA TODOS LOS p DEL FOOTER */
-	color: white; /* COLOR */
-	text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
-}
-
-.chicha_copyright_line::before{
+	padding-left: 80px;
+	p{ /* APLICA TODOS LOS p DEL FOOTER */
+		color: white; /* COLOR */
+		text-align: center; /* ALINEACIÓN CENTRADA DE LOS TEXTOS */
+	}
+	.chicha_copyright_line::before{
 	content: "";
 	display: flex;
 	align-items: center; /* ALINEACIÓN CENTRADA DE LOS ELEMENTOS */
@@ -92,6 +80,7 @@
 	width: 100%;
 	height: 1px;
 	background-color: currentColor;
+	}
 }
 
 .chicha_redes{ /* APLICA A LOS DATOS COLOCADOS EN SÍGUENOS */
@@ -107,13 +96,10 @@
 	justify-content: center;
 	align-items: center;
 	padding-bottom: 25px;
+	a{ 
+		padding: 10px;
+	}
 }
-
-.chicha_redes_align a{ 
-	padding: 10px;
-}
-
-/* FIN DEL CSS DEL FOOTER */
 
 /* ----------------------------------------- */
 
@@ -123,6 +109,10 @@
 	.chicha_footer{
 		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
 		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+	}
+
+	.chicha_copyright{ /* APLICA A LOS DATOS COLOCADOS EN EL COPYRIGHT */
+		padding-left: 0px;
 	}
 }
 
@@ -135,3 +125,7 @@
 		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
 	}
 }
+
+/* ----------------------------------------- */
+
+/* FIN DEL CSS DEL FOOTER */
