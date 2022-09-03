@@ -116,10 +116,21 @@
 	padding: 2rem 5rem;	/* RELLENO PARA SEPARACIÓN */
 	padding-bottom: 3rem;
 	border-top: 1px solid #000000; /* BORDE SUPERIOR */
-	p{ /* APLICA A LOS PARRAFOS DE LA SECCIÓN DE MISION Y VISION */
+	.chicha_mision{
 		font-size: 30px; /* TAMAÑO DE FUENTE */
 		line-height: 100px;	/* SEPARACION DE LINEAS DE PARRAFOS */
 		font-family: $fuente-titulos;
+		&_descripcion{
+			font-style: italic;
+		}
+	}
+	.chicha_vision{
+		font-size: 30px; /* TAMAÑO DE FUENTE */
+		line-height: 100px;	/* SEPARACION DE LINEAS DE PARRAFOS */
+		font-family: $fuente-titulos;
+		&_descripcion{
+			font-style: italic;
+		}
 	}
 }
 
@@ -171,7 +182,7 @@
 	}
 
 	.chicha_mision_vision{ /* APLICA A LA SECCIÓN DE MISION Y VISION */
-		padding: 2rem 2rem;	/* RELLENO PARA SEPARACIÓN */
+		padding: 2rem 3rem;	/* RELLENO PARA SEPARACIÓN */
 	}
 }
 

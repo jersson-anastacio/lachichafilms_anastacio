@@ -4,6 +4,10 @@
 /* IMPORTAMOS LAS FUENTES DE GOOGLE */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+/* DESPLAZAMIENTO DEL SCROLL SUAVE */
+html {
+  scroll-behavior: smooth; }
+
 /* ELIMINAMOS LOS MÁRGENES DEL NAVEGADOR */
 * {
   margin: 0;
@@ -32,6 +36,31 @@ a {
   grid-template-rows: auto 1fr auto;
   /* DEFINIMOS LAS FILAS: HACEMOS QUE EL HEADER SE POSICIONE AUTOMATICAMENTE ARRIBA DEL BODY, EL MAIN TIENE 1 FRACCION DEL BODY, Y EL FOOTER SE POSICIONARÁ AUTOMATICAMENTE AL FINAL DEL BODY */
   grid-template-areas: "area_chicha_header" "area_chicha_main" "area_chicha_footer"; }
+
+/* BOTON PARA IR ARRIBA DE LA PAGINA */
+.chicha_boton_arriba {
+  position: fixed;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  bottom: 30px;
+  right: 50px;
+  border-radius: 50px;
+  z-index: 11;
+  color: #ffffff;
+  background-color: #cb2459; }
+  .chicha_boton_arriba:hover {
+    background-color: #198754;
+    color: #ffffff;
+    transition: all 0.5s; }
+
+/* BOTON PARA IR ARRIBA DE LA PAGINA EN CELULARES */
+@media only screen and (max-width: 768px) {
+  .chicha_boton_arriba {
+    bottom: 20px;
+    right: 20px; } }
 
 /* CLASE EXTEND PARA CENTRAR */
 .chicha_center, .chicha_main_index, .chicha_main_index_elements, .chicha_main_index_elements .chicha_subtitulo, .chicha_info_main, .chicha_mision_vision {
@@ -223,13 +252,22 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   padding-bottom: 3rem;
   border-top: 1px solid #000000;
   /* BORDE SUPERIOR */ }
-  .chicha_mision_vision p {
-    /* APLICA A LOS PARRAFOS DE LA SECCIÓN DE MISION Y VISION */
+  .chicha_mision_vision .chicha_mision {
     font-size: 30px;
     /* TAMAÑO DE FUENTE */
     line-height: 100px;
     /* SEPARACION DE LINEAS DE PARRAFOS */
     font-family: "Kanit", sans-serif; }
+    .chicha_mision_vision .chicha_mision_descripcion {
+      font-style: italic; }
+  .chicha_mision_vision .chicha_vision {
+    font-size: 30px;
+    /* TAMAÑO DE FUENTE */
+    line-height: 100px;
+    /* SEPARACION DE LINEAS DE PARRAFOS */
+    font-family: "Kanit", sans-serif; }
+    .chicha_mision_vision .chicha_vision_descripcion {
+      font-style: italic; }
 
 /* ----------------------------------------- */
 /* MEDIA QUERY 992 PX PAGINA INICIO */
@@ -260,7 +298,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
     font-size: 3em; }
   .chicha_mision_vision {
     /* APLICA A LA SECCIÓN DE MISION Y VISION */
-    padding: 2rem 2rem;
+    padding: 2rem 3rem;
     /* RELLENO PARA SEPARACIÓN */ } }
 
 /* ----------------------------------------- */

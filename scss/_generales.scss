@@ -6,7 +6,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
+/* DESPLAZAMIENTO DEL SCROLL SUAVE */
+html{
+	scroll-behavior: smooth;
+}
+
 /* ELIMINAMOS LOS MÁRGENES DEL NAVEGADOR */
+
 *{
 	margin: 0;
 	padding: 0;
@@ -34,6 +40,35 @@ a{
 	grid-template-areas: "area_chicha_header"
 						 "area_chicha_main"
 						 "area_chicha_footer";
+}
+
+/* BOTON PARA IR ARRIBA DE LA PAGINA */
+.chicha_boton_arriba {
+	position: fixed;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	bottom: 30px;
+	right: 50px;
+	border-radius: 50px;
+	z-index: 11;
+	color: #ffffff;
+	background-color: $color-principal;
+	&:hover{
+		background-color: #198754;
+		color: #ffffff;
+		transition: all 0.5s;
+	}
+}
+
+/* BOTON PARA IR ARRIBA DE LA PAGINA EN CELULARES */
+@media only screen and (max-width:768px){
+	.chicha_boton_arriba {
+		bottom: 20px;
+		right: 20px;
+	}
 }
 
 /* CLASE EXTEND PARA CENTRAR */
