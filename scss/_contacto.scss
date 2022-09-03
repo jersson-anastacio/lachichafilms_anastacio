@@ -96,8 +96,11 @@
 			fieldset{
 				padding: 2rem 2rem;
 				color: $color-secundario;
-				background-color: rgba(8, 95, 122, 0.4);
+				background-color: #0588a3;
 				border-radius: 15px;
+				legend{
+					color: #ffffff;
+				}
 			}
 		}
 		.chicha_form_container_elements{
@@ -319,6 +322,20 @@
 /* MEDIA QUERY 576 PX PAGINA CONTACTO */
 
 @media only screen and (max-width:576px){
+
+	.chicha_form_container{
+		&_info{
+			form{
+				fieldset{
+					padding: 2rem 1rem;
+				}
+			}
+		}
+	}
+
+	.chicha_subtitle_page_contacto {
+		padding-top: 1rem;
+	}
 
 	.chicha_info_page_contacto{
 		i{ 
