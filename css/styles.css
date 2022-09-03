@@ -868,6 +868,10 @@ $justificacion_hijo: espera valores como start, end, center, stretch
     justify-self: center;
     align-self: center;
     padding: 2.5rem; }
+    .chicha_clientes_grilla .chicha_cliente:hover {
+      -webkit-transform: scale(1.3);
+      transform: scale 1, 3;
+      transition: all 0.3s; }
     .chicha_clientes_grilla .chicha_cliente img {
       width: auto;
       height: auto;
