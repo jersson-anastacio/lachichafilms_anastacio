@@ -35,9 +35,7 @@ a {
   /* 1 SOLA COLUMNA QUE ABARCA EL 100% DEL BODY */
   grid-template-rows: auto 1fr auto;
   /* DEFINIMOS LAS FILAS: HACEMOS QUE EL HEADER SE POSICIONE AUTOMATICAMENTE ARRIBA DEL BODY, EL MAIN TIENE 1 FRACCION DEL BODY, Y EL FOOTER SE POSICIONARÁ AUTOMATICAMENTE AL FINAL DEL BODY */
-  grid-template-areas: "area_chicha_header"
- "area_chicha_main"
- "area_chicha_footer"; }
+  grid-template-areas: "area_chicha_header" "area_chicha_main" "area_chicha_footer"; }
 
 /* BOTON PARA IR ARRIBA DE LA PAGINA */
 .chicha_boton_arriba {
@@ -131,10 +129,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   grid-area: area_chicha_main;
   grid-template-rows: auto auto auto auto;
   /* 2730px ES EL 88% DEL MAIN */
-  grid-template-areas: "area_main_index_video"
- "area_main_index_titulo"
- "area_main_index_descripcion"
- "area_main_index_mision";
+  grid-template-areas: "area_main_index_video" "area_main_index_titulo" "area_main_index_descripcion" "area_main_index_mision";
   background-color: #ffffff; }
 
 .chicha_video_main {
@@ -313,11 +308,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   display: grid;
   grid-area: area_chicha_main;
   grid-template-rows: auto auto auto auto auto;
-  grid-template-areas: "area_main_nosotros_logo"
- "area_main_nosotros_titulo"
- "area_main_nosotros_descripcion"
- "area_main_nosotros_titulo_equipo"
- "area_main_nosotros_equipo";
+  grid-template-areas: "area_main_nosotros_logo" "area_main_nosotros_titulo" "area_main_nosotros_descripcion" "area_main_nosotros_titulo_equipo" "area_main_nosotros_equipo";
   justify-content: center;
   align-items: center;
   background-color: #ffffff; }
@@ -431,8 +422,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   display: grid;
   grid-area: area_main_nosotros_equipo;
   grid-template-columns: 20% 20% 20% 20%;
-  grid-template-areas: "cargo1 cargo2 cargo3 cargo4"
- "cargo5 cargo6 cargo7 cargo8";
+  grid-template-areas: "cargo1 cargo2 cargo3 cargo4" "cargo5 cargo6 cargo7 cargo8";
   justify-content: center;
   gap: 3rem;
   /* ESPACIADO ENTRE CONTENEDORES */
@@ -501,10 +491,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
     width: auto;
     height: auto;
     grid-template-columns: 40% 40%;
-    grid-template-areas: "cargo1 cargo2"
- "cargo3 cargo4"
- "cargo5 cargo6"
- "cargo7 cargo8";
+    grid-template-areas: "cargo1 cargo2" "cargo3 cargo4" "cargo5 cargo6" "cargo7 cargo8";
     justify-self: center;
     align-content: center;
     padding: 3rem 0rem;
@@ -539,9 +526,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   display: grid;
   grid-area: area_chicha_main;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "area_main_servicios_titulo"
- "area_main_servicios_descripcion"
- "area_main_servicios_elements";
+  grid-template-areas: "area_main_servicios_titulo" "area_main_servicios_descripcion" "area_main_servicios_elements";
   justify-content: center;
   align-items: center;
   background-color: #ffffff; }
@@ -668,10 +653,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   display: grid;
   grid-area: area_chicha_main;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "area_main_portafolio_titulo"
- "area_main_portafolio_descripcion"
- "area_main_portafolio_subtitle"
- "area_main_portafolio_elements";
+  grid-template-areas: "area_main_portafolio_titulo" "area_main_portafolio_descripcion" "area_main_portafolio_subtitle" "area_main_portafolio_elements";
   justify-content: center;
   align-items: center;
   background-color: #ffffff; }
@@ -810,11 +792,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   display: grid;
   grid-area: area_chicha_main;
   grid-template-rows: auto auto auto auto auto;
-  grid-template-areas: "area_main_clientes_titulo"
- "area_main_clientes_descripcion"
- "area_main_clientes_subtitle"
- "area_main_clientes_elements"
- "area_main_clientes_leyenda";
+  grid-template-areas: "area_main_clientes_titulo" "area_main_clientes_descripcion" "area_main_clientes_subtitle" "area_main_clientes_elements" "area_main_clientes_leyenda";
   justify-content: center;
   align-items: center;
   background-color: #ffffff; }
@@ -882,10 +860,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   grid-area: area_main_clientes_elements;
   grid-template-columns: 18% 18% 18% 18% 18%;
   grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: "cliente_uno cliente_dos cliente_tres cliente_cuatro cliente_cinco"
- "cliente_seis cliente_siete cliente_ocho cliente_nueve cliente_diez"
- "cliente_once cliente_doce cliente_trece cliente_catorce cliente_quince"
- "cliente_dieciseis cliente_diecisiete cliente_dieciocho cliente_diecinueve cliente_veinte";
+  grid-template-areas: "cliente_uno cliente_dos cliente_tres cliente_cuatro cliente_cinco" "cliente_seis cliente_siete cliente_ocho cliente_nueve cliente_diez" "cliente_once cliente_doce cliente_trece cliente_catorce cliente_quince" "cliente_dieciseis cliente_diecisiete cliente_dieciocho cliente_diecinueve cliente_veinte";
   justify-content: center;
   align-items: center;
   background-color: #ffffff; }
@@ -921,11 +896,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   .chicha_clientes_grilla {
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 18% 18% 18% 18% 18%;
-    grid-template-areas: "cliente_uno cliente_dos cliente_tres cliente_cuatro"
- "cliente_cinco cliente_seis cliente_siete cliente_ocho" 
- "cliente_nueve cliente_diez cliente_once cliente_doce"
- "cliente_trece cliente_catorce cliente_quince cliente_dieciseis"
- "cliente_diecisiete cliente_dieciocho cliente_diecinueve cliente_veinte"; }
+    grid-template-areas: "cliente_uno cliente_dos cliente_tres cliente_cuatro" "cliente_cinco cliente_seis cliente_siete cliente_ocho"  "cliente_nueve cliente_diez cliente_once cliente_doce" "cliente_trece cliente_catorce cliente_quince cliente_dieciseis" "cliente_diecisiete cliente_dieciocho cliente_diecinueve cliente_veinte"; }
     .chicha_clientes_grilla .chicha_cliente {
       padding: 3rem; } }
 
@@ -957,16 +928,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   .chicha_clientes_grilla {
     grid-template-columns: 45% 45%;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-areas: "cliente_uno cliente_dos"
- "cliente_tres cliente_cuatro"
- "cliente_cinco cliente_seis " 
- "cliente_siete cliente_ocho"
- "cliente_nueve cliente_diez"
- "cliente_once cliente_doce"
- "cliente_trece cliente_catorce"
- "cliente_quince cliente_dieciseis"
- "cliente_diecisiete cliente_dieciocho"
- "cliente_diecinueve cliente_veinte"; } }
+    grid-template-areas: "cliente_uno cliente_dos" "cliente_tres cliente_cuatro" "cliente_cinco cliente_seis "  "cliente_siete cliente_ocho" "cliente_nueve cliente_diez" "cliente_once cliente_doce" "cliente_trece cliente_catorce" "cliente_quince cliente_dieciseis" "cliente_diecisiete cliente_dieciocho" "cliente_diecinueve cliente_veinte"; } }
 
 /* ----------------------------------------- */
 /* MEDIA QUERY 400 PX PAGINA CLIENTES */
@@ -981,12 +943,7 @@ $justificacion_hijo: espera valores como start, end, center, stretch
   display: grid;
   grid-area: area_chicha_main;
   grid-template-rows: auto auto auto auto auto auto;
-  grid-template-areas: "area_main_contacto_titulo"
- "area_main_contacto_datos"
- "area_main_contacto_subtitle"
- "area_main_contacto_elements"
- "area_main_contacto_estamos_aquí"
- "area_main_contacto_mapa";
+  grid-template-areas: "area_main_contacto_titulo" "area_main_contacto_datos" "area_main_contacto_subtitle" "area_main_contacto_elements" "area_main_contacto_estamos_aquí" "area_main_contacto_mapa";
   justify-content: center;
   align-items: center;
   background-color: #ffffff; }
@@ -1160,6 +1117,15 @@ $justificacion_hijo: espera valores como start, end, center, stretch
       font-family: "Kanit", sans-serif; }
       .chicha_form_container .chicha_form_text_page_contacto .chicha_redes_align_page_contacto a {
         padding: 10px; }
+      .chicha_form_container .chicha_form_text_page_contacto .chicha_redes_align_page_contacto_fb:hover {
+        color: #4267B2;
+        transition: all 0.5s; }
+      .chicha_form_container .chicha_form_text_page_contacto .chicha_redes_align_page_contacto_ig:hover {
+        color: #cb2459;
+        transition: all 0.5s; }
+      .chicha_form_container .chicha_form_text_page_contacto .chicha_redes_align_page_contacto_vm:hover {
+        color: #19B7EA;
+        transition: all 0.5s; }
 
 .chicha_form_container_boton {
   width: 100%;

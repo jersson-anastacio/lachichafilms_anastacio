@@ -146,7 +146,7 @@
 			font-size: 20px;
 		}
 		a{
-			color: $color-secundario;	
+			color: $color-secundario;
 		}
 		.chicha_redes_align_page_contacto{
 			@include chicha_caja(flex, column, center, center );
@@ -155,6 +155,25 @@
 			font-family: $fuente-titulos;
 			a{ 
 				padding: 10px;
+
+			}
+			&_fb{
+				&:hover{
+					color:#4267B2;
+					transition: all 0.5s;
+				}
+			}
+			&_ig{
+				&:hover{
+					color:$color-principal;
+					transition: all 0.5s;
+				}
+			}
+			&_vm{
+				&:hover{
+					color:#19B7EA;
+					transition: all 0.5s;
+				}
 			}
 		}
 	}
