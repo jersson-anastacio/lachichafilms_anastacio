@@ -19,7 +19,7 @@
         <!-- EMPIEZA LA BARRA DE NAVEGACIÓN CON EL LOGO DEL SITIO -->
         <!-- HEADER BOOTSTRAP -->
         <header>
-            <nav class="navbar navbar-expand-xxl navbar-dark" style="background-color: #000000;">
+            <nav class="navbar navbar-expand-xxl navbar-dark">
                 <div class="container-fluid">                    
                     <div>
                         <a href="../index.html"><img src="../images/lachichalogo.png" loading="lazy"></a>
@@ -96,7 +96,7 @@
                                 <p>El servicio de fotografía se complementa con nuestro servicio principal, enfocándonos específicamente en la fotografía industrial, comercial y publicitaria. Con ello brindamos al cliente un recurso esencial para la identidad y posicionamiento de su marca.</p>
                             </div>
                             <div data-aos="flip-right" class="chicha_video_services">
-                                <video controls poster="../images/miniatura_fotos.png" src="../videos/video_servicio.mp4"></video>
+                                <video controls poster="../images/miniatura_fotos.png" src="../videos/fotografia_servicio.mp4"></video>
                             </div>
                         </div>
                         <div class="chicha_info_page_servicios">
@@ -105,7 +105,7 @@
                                 <p>Actualmente las animaciones de gráficos en movimiento son indispensables para cualquier proyecto audiovisual. Con este servicio crearemos distintos tipos de animación para tus gráficos, como logotipos, lowerd thirds, banners, figuras geométricas, asimétricas y métricas.</p>
                             </div>
                             <div data-aos="flip-right" class="chicha_video_services">
-                                <video controls poster="../images/miniatura_motion.png" src="../videos/video_servicio.mp4"></video>
+                                <video controls poster="../images/miniatura_motion.png" src="../videos/motion_graphics_servicio.mp4"></video>
                             </div>
                         </div>
                         <div class="chicha_info_page_servicios">
@@ -114,7 +114,7 @@
                                 <p>En un mundo digitalizado, no pueden faltar los videos de realidad virtual o videos en 360 grados. Es por ello que contamos con este servicio para ofrecerle al cliente una experiencia audiovisual distinta, con recorridos virtuales que generen una inmersión exclusiva al espectador.</p>
                             </div>
                             <div data-aos="flip-right" class="chicha_video_services">
-                                <video controls poster="../images/miniatura_360.png" src="../videos/video_servicio.mp4"></video>
+                                <video controls poster="../images/miniatura_360.png" src="../videos/360_servicio.mp4"></video>
                             </div>
                         </div>
                     </section>
@@ -173,6 +173,21 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <!-- FUNCIÓN PARA QUE EL VIDEO SE DETENGA CUANDO SE REPRODUCE OTRO -->
+    <script>
+        document.addEventListener(
+            "play",
+            function(e) {
+                var video = document.getElementsByTagName("video");
+                for (var i = 0, len = video.length; i < len; i++) {
+                    if (video[i] != e.target) {
+                        video[i].pause();
+                    }
+                }
+            },
+            true
+        );
     </script>
 </body>
 </html>

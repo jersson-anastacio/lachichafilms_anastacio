@@ -82,24 +82,25 @@ $justificacion_hijo: espera valores como start, end, center, stretch
 /* ----------------------------------------- */
 /* INICIO DEL CSS DEL HEADER */
 /* HEADER BOOTSTRAP */
-.container-fluid {
-  width: 97%; }
-  .container-fluid img {
-    /* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
-    width: auto;
-    height: auto;
-    max-width: 183px;
-    max-height: 80px; }
-  .container-fluid .navbar-toggler .fa-solid, .container-fluid .fas {
-    color: #cb2459;
-    font-size: 30px; }
-
 .navbar {
   padding-top: 25px;
   --bs-navbar-padding-x: 1.5rem;
   --bs-navbar-padding-y: 1.5rem;
   border-bottom: 3px solid #cb2459;
-  /* BORDE INFERIOR DEL HEADER */ }
+  /* BORDE INFERIOR DEL HEADER */
+  background-color: #000000;
+  /* COLOR DE FONDO */ }
+  .navbar .container-fluid {
+    width: 97%; }
+    .navbar .container-fluid img {
+      /* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
+      width: auto;
+      height: auto;
+      max-width: 183px;
+      max-height: 80px; }
+    .navbar .container-fluid .navbar-toggler .fa-solid, .navbar .container-fluid .fas {
+      color: #cb2459;
+      font-size: 30px; }
   .navbar .navbar-nav {
     padding-top: 1rem;
     padding-bottom: 1rem; }
@@ -878,6 +879,16 @@ $justificacion_hijo: espera valores como start, end, center, stretch
       max-width: 100%;
       max-height: 100%; }
 
+.modal {
+  --bs-modal-margin: 1rem; }
+  .modal h5 {
+    font-family: "Kanit", sans-serif; }
+  .modal-body .chicha-msj-modal {
+    font-style: italic;
+    margin-bottom: 2rem; }
+  .modal-body .chicha-autor-modal {
+    margin-bottom: 0rem; }
+
 .chicha_subtitle_end_page_clientes {
   display: flex;
   flex-direction: row;
@@ -935,10 +946,10 @@ $justificacion_hijo: espera valores como start, end, center, stretch
     grid-template-areas: "cliente_uno cliente_dos" "cliente_tres cliente_cuatro" "cliente_cinco cliente_seis "  "cliente_siete cliente_ocho" "cliente_nueve cliente_diez" "cliente_once cliente_doce" "cliente_trece cliente_catorce" "cliente_quince cliente_dieciseis" "cliente_diecisiete cliente_dieciocho" "cliente_diecinueve cliente_veinte"; } }
 
 /* ----------------------------------------- */
-/* MEDIA QUERY 400 PX PAGINA CLIENTES */
-@media only screen and (max-width: 400px) {
+/* MEDIA QUERY 450 PX PAGINA CLIENTES */
+@media only screen and (max-width: 450px) {
   .chicha_clientes_grilla .chicha_cliente {
-    padding: 2rem; } }
+    padding: 2.3rem; } }
 
 /* ----------------------------------------- */
 /* FIN DEL CSS DE LA PÁGINA CLIENTES */

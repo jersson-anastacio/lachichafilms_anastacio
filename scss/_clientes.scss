@@ -90,6 +90,22 @@
 	}
 }
 
+.modal {
+    --bs-modal-margin: 1rem;
+	h5{
+		font-family: $fuente-titulos;	
+	}
+	&-body{
+		.chicha-msj-modal{
+			font-style: italic;
+			margin-bottom: 2rem;
+		}
+		.chicha-autor-modal{
+			margin-bottom: 0rem;
+		}		
+	}
+}
+
 .chicha_subtitle_end_page_clientes{
 	@include chicha_caja(flex, row, center, center );
 	width: 80%;
@@ -180,13 +196,13 @@
 
 /* ----------------------------------------- */
 
-/* MEDIA QUERY 400 PX PAGINA CLIENTES */
+/* MEDIA QUERY 450 PX PAGINA CLIENTES */
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width:450px){
 	
 	.chicha_clientes_grilla{
 		.chicha_cliente{
-		padding: 2rem;
+		padding: 2.3rem;
 		}
 	}	
 }

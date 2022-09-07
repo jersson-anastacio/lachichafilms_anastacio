@@ -2,25 +2,25 @@
 /* INICIO DEL CSS DEL HEADER */
 /* HEADER BOOTSTRAP */
 
-.container-fluid{
-	width: 97%;
-	img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
-		width: auto;
-		height: auto;
-		max-width: 183px;
-		max-height: 80px;
-	}
-	.navbar-toggler .fa-solid, .fas {
-		color:$color-principal;
-		font-size: 30px;
-	}
-}
-
 .navbar {
 	padding-top: 25px;
     --bs-navbar-padding-x: 1.5rem;
     --bs-navbar-padding-y: 1.5rem;
 	border-bottom: 3px solid $color-principal; /* BORDE INFERIOR DEL HEADER */
+	background-color:#000000; /* COLOR DE FONDO */
+	.container-fluid{
+		width: 97%;
+		img{	/* APLICA AL TAMAÑO DEL LOGO DEL HEADER */
+			width: auto;
+			height: auto;
+			max-width: 183px;
+			max-height: 80px;
+		}
+		.navbar-toggler .fa-solid, .fas {
+			color:$color-principal;
+			font-size: 30px;
+		}
+	}
 	.navbar-nav {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
