@@ -2,9 +2,9 @@
 
 .chicha_main_index{
 	@extend .chicha_center;
-	display: grid;
+	display: grid; 
 	grid-area: area_chicha_main;
-	grid-template-rows: auto auto auto auto; /* 2730px ES EL 88% DEL MAIN */
+	grid-template-rows: auto auto auto auto; 
 	grid-template-areas: "area_main_index_video"
 						 "area_main_index_titulo"
 						 "area_main_index_descripcion"
@@ -12,7 +12,7 @@
 	background-color:#ffffff;
 }
 
-.chicha_video_main{ /* APLICA AL VIDEO DE INICIO */
+.chicha_video_main{ 
 	display: flex; /* MOSTRAMOS EL VIDEO DE UNA MANERA FLEXIBLE AL CONTENEDOR */
 	justify-content: space-around; /* AJUSTAMOS EL VIDEO CON IGUALDAD DE ESPACIADO */
 	align-items: center; /* ALINEACIÓN CENTRADA DEL VIDEO */
@@ -27,29 +27,29 @@
 .chicha_main_index_elements{ /* APLICA AL MAIN DEL INDEX */
 	@extend .chicha_center;
 	display: grid;
-	background-color: rgb(255, 255, 255); /* COLOR DE FONDO DEL MAIN INDEX */
+	background-color: rgb(255, 255, 255);
 	padding-top: 20px; /* RELLENO SUPERIOR */
 	a{ /* APLICA AL BOTON DE VER REEL */
-		color: black; /* COLOR */
-		font-size: 20px; /* TAMAÑO DE FUENTE DE LOS LINKS */
+		color: black; 
+		font-size: 20px;
 		&:hover{
 			color:$color-principal;
 			transform: scale (1,1);
-			transition: all 0.5s
+			transition: all 0.5s;
 		}
 	}
 	.chicha_titulo{
 		h1{ /* APLICA AL H1 DEL MAIN INDEX */
-			color: $color-secundario; /* COLOR */
-			font-size: 45px; /* TAMAÑO DE FUENTE */
+			color: $color-secundario;
+			font-size: 45px;
 			font-family: $fuente-titulos;
 		}
 	}
 	.chicha_subtitulo{ /* APLICA AL CONTENEDOR DE LA CLASE CHICHA_SUBTITULO */
 		@extend .chicha_center;
-		color: $color-secundario; /* COLOR */
-		display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
-		font-size: 20px; /* TAMAÑO DE FUENTE */	
+		color: $color-secundario; 
+		display: flex;
+		font-size: 20px;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 		gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
@@ -62,7 +62,7 @@
 			max-width: 25px;
 			max-height: 25px;
 		}
-		h2{ /* APLICA A LAS IMAGENES DE ESTRELLAS DEL SUBTITULO */
+		h2{ 
 			margin-bottom: 0rem;
 		}
 	}
@@ -71,7 +71,7 @@
 	}
 	.chicha_boton_video_text{
 		padding-bottom: 1rem;
-		border-bottom: 1px solid #000000; /* BORDE INFERIOR DEL MAIN INDEX */
+		border-bottom: 1px solid #000000; 
 	}
 }
 
@@ -79,7 +79,6 @@
 	@extend .chicha_center;
 	display: flex; /* MOSTRAMOS DE UNA MANERA FLEXIBLE AL CONTENEDOR */
 	justify-content: space-around; /* AJUSTAMOS EL VIDEO CON IGUALDAD DE ESPACIADO */
-	/*flex-wrap: wrap; ESTO ES PARA EL MEDIA CUERY*/ 
 	background-color: rgb(255, 255, 255); /* COLOR DE FONDO */
 	gap: 50px; /* ESPACIADO ENTRE CONTENEDORES */
 	padding: 3rem 3rem;	/* RELLENO PARA SEPARACIÓN */

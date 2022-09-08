@@ -20,14 +20,14 @@
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #000000; 
 	h1{
-		color: $color-secundario; /* COLOR */
-		font-size: 45px; /* TAMAÑO DE FUENTE */
+		color: $color-secundario; 
+		font-size: 45px; 
 		font-family: $fuente-titulos;
 	}
 	
 	p{
-		color: $color-secundario; /* COLOR */
-		font-size: 20px; /* TAMAÑO DE FUENTE */
+		color: $color-secundario; 
+		font-size: 20px; 
 		font-family: $fuente-titulos;
 		margin-bottom: 0rem;
 	}
@@ -101,17 +101,22 @@
 			margin-bottom: 2rem;
 		}
 		.chicha-autor-modal{
+			font-family: $fuente-titulos;
+			font-size: 20px;
 			margin-bottom: 0rem;
-		}		
+		}
+		.chicha-cargo-modal{
+			font-family: $fuente-titulos;
+		}
 	}
 }
 
 .chicha_subtitle_end_page_clientes{
 	@include chicha_caja(flex, row, center, center );
 	width: 80%;
-	color: $color-secundario; /* COLOR */
+	color: $color-secundario; 
 	flex-wrap: wrap;
-	font-size: 20px; /* TAMAÑO DE FUENTE */
+	font-size: 20px; 
 	padding-top: 2rem;
 	padding-bottom: 4rem;
 }

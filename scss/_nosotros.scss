@@ -28,20 +28,20 @@
 			max-height: 40%;
 		}
 	}
-	.chicha_subtitulo{ /* APLICA AL CONTENEDOR DE LA CLASE CHICHA_SUBTITULO */
+	.chicha_subtitulo{ 
 		@include chicha_caja(flex, row , center, center );	
-		color: $color-secundario; /* COLOR */
-		font-size: 20px; /* TAMAÑO DE FUENTE */	
+		color: $color-secundario;
+		font-size: 20px; 
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-		gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
-		img{ /* APLICA A LAS IMAGENES DE ESTRELLAS DEL SUBTITULO */
+		gap: 10px; 
+		img{ 
 			width: auto;
 			height: auto;
 			max-width: 25px;
 			max-height: 25px;
 		}
-		h2{ /* APLICA A LAS IMAGENES DE ESTRELLAS DEL SUBTITULO */
+		h2{ 
 			margin-bottom: 0rem;
 		}
 	}
@@ -105,7 +105,7 @@
 	grid-template-areas: "cargo1 cargo2 cargo3 cargo4"
 						 "cargo5 cargo6 cargo7 cargo8";
 	justify-content: center;
-	gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
+	gap: 3rem; 
 	padding: 4rem 0rem;
 	line-height: 25px;
 	.card{
@@ -178,7 +178,7 @@
 	.chicha_info_page_nosotros{
 		width: 100%;
 		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+		gap: 1rem; 
 		padding: 1rem 0rem;
 		&_descripcion{
 			p{ 
@@ -227,7 +227,7 @@
 		justify-self: center;
         align-content: center;
 		padding: 3rem 0rem;
-		gap: 2rem 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+		gap: 2rem 2rem; 
 		.card{
 			padding: 0.5rem 0.5rem;
 			p{

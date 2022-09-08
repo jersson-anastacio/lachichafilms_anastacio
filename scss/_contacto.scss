@@ -22,15 +22,15 @@
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 	h1{
-		color: $color-secundario; /* COLOR */
-		font-size: 45px; /* TAMAÑO DE FUENTE */
+		color: $color-secundario; 
+		font-size: 45px; 
 		padding-bottom: 1rem;
 		border-bottom: 1px solid #000000;
 		font-family:$fuente-titulos;
 	}
 	p{
-		color: $color-secundario; /* COLOR */
-		font-size: 20px; /* TAMAÑO DE FUENTE */
+		color: $color-secundario; 
+		font-size: 20px; 
 		padding-top: 2rem;
 	}
 }
@@ -38,18 +38,18 @@
 .chicha_info_page_contacto{
 	@include chicha_caja(flex, row, center, center );
     width: 90%;
-	gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
+	gap: 5rem; 
 	padding-top: 1rem;
 	padding-bottom: 5rem;
 	border-bottom: 1px solid #000000;
 	i{ 
 		padding-right: 10px;
-		font-size: 30px; /* AJUSTAMOS EL TAMAÑO DE LOS ICONOS DE REDES SOCIALES */
+		font-size: 30px;
 	}
 	p{
 		padding: 1rem;
 		font-size: 20px;
-		font-weight: bold; /* PONEMOS NEGRITA A UN PARRAFO */
+		font-weight: bold; 
 	}
 	a{
 		color: #000000;
@@ -63,20 +63,20 @@
 .chicha_subtitle_page_contacto{
 	@include chicha_caja(flex, column, center, center );
 	width: 70%;
-	color: $color-secundario; /* COLOR */
-	font-size: 20px; /* TAMAÑO DE FUENTE */
+	color: $color-secundario; 
+	font-size: 20px; 
 	padding-top: 3rem;
 	padding-bottom: 1rem;
 	h2{
-		color: $color-secundario; /* COLOR */
-		font-size: 32px; /* TAMAÑO DE FUENTE */
+		color: $color-secundario; 
+		font-size: 32px; 
 		padding-bottom: 1rem;
 		border-bottom: 1px solid #000000;
 		font-family: $fuente-titulos;
 	}
 	p{
-		color: $color-secundario; /* COLOR */
-		font-size: 20px; /* TAMAÑO DE FUENTE */
+		color: $color-secundario; 
+		font-size: 20px; 
 		padding-top: 3rem;
 		padding-bottom: 2rem;
 	}
@@ -86,7 +86,7 @@
 	@include chicha_caja(flex, row, center, center );
 	flex-wrap: wrap;
 	text-align: start;
-	gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
+	gap: 3rem; 
 	padding-top: 2rem;
 	padding-bottom: 4rem;
 	&_info{
@@ -105,7 +105,7 @@
 		}
 		.chicha_form_container_elements{
 			width: 100%;
-			gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+			gap: 1rem; 
 			flex-wrap: wrap;
 			font-weight:bolder;
 			.chicha_form_textbox{
@@ -132,14 +132,14 @@
 			}
 			.chicha_form_info_check{
 				@include chicha_caja(flex, row, center, center );
-				gap: 10px; /* ESPACIADO ENTRE CONTENEDORES */
+				gap: 10px; 
 			}
 		}		
 	}
 	.chicha_form_text_page_contacto{
 		@include chicha_caja(flex, column, center, center );
 		width: 40%;
-		gap: 5rem; /* ESPACIADO ENTRE CONTENEDORES */
+		gap: 5rem; 
 		padding: 1rem 3rem;
 		line-height: 35px;
 		p{
@@ -150,7 +150,7 @@
 		}
 		.chicha_redes_align_page_contacto{
 			@include chicha_caja(flex, column, center, center );
-			gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+			gap: 2rem;
 			font-size: 20px;
 			font-family: $fuente-titulos;
 			a{ 
@@ -199,8 +199,8 @@
 .chicha_title_estamos_aqui{
 	@include chicha_caja(flex, column, center, center );
 	width: 70%;
-	color: $color-secundario; /* COLOR */
-	font-size: 20px; /* TAMAÑO DE FUENTE */
+	color: $color-secundario; 
+	font-size: 20px; 
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 	h2{
@@ -209,8 +209,8 @@
 		font-family: $fuente-titulos;
 	}
 	p{
-		color: rgb(0, 0, 0); /* COLOR */
-		font-size: 20px; /* TAMAÑO DE FUENTE */
+		color: rgb(0, 0, 0); 
+		font-size: 20px; 
 		padding-top: 2rem;
 		padding-bottom: 1rem;
 	}
@@ -234,7 +234,7 @@
 @media only screen and (max-width:1200px){
 
 	.chicha_info_page_contacto{
-		gap: 1rem; /* ESPACIADO ENTRE CONTENEDORES */
+		gap: 1rem; 
 	}
 }
 
@@ -255,8 +255,8 @@
 	}
 
 	.chicha_info_page_contacto{
-		flex-direction: column; /* LA DIRECCIÓN DEL FLEX ESTA EN VERTICAL */
-		gap: 2rem; /* ESPACIADO ENTRE CONTENEDORES */
+		flex-direction: column; 
+		gap: 2rem; 
 		padding-bottom: 3rem;
 	}
 
@@ -312,7 +312,7 @@
 		}
 		.chicha_form_text_page_contacto{
 			width: 80%;
-			gap: 3rem; /* ESPACIADO ENTRE CONTENEDORES */
+			gap: 3rem;
 			padding: 2rem 0rem;
 			.chicha_redes_align_page_contacto{
 				a{ 
@@ -358,7 +358,7 @@
 
 	.chicha_info_page_contacto{
 		i{ 
-			font-size: 20px; /* AJUSTAMOS EL TAMAÑO DE LOS ICONOS DE REDES SOCIALES */
+			font-size: 20px; 
 		}
 		p{
 			font-size: 18px;
